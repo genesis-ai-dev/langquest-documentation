@@ -5,9 +5,6 @@ const withMDX = createMDX();
 /** @type {import('next').NextConfig} */
 const config = {
   reactStrictMode: true,
-  images: {
-    domains: ['cdn.loom.com'],
-  },
 };
 
 export default withMDX(config);
