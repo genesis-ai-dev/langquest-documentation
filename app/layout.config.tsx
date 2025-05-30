@@ -15,11 +15,33 @@ export const baseOptions: BaseLayoutProps = {
           width="24"
           height="24"
           xmlns="http://www.w3.org/2000/svg"
-          aria-label="Logo"
+          aria-label="LangQuest Logo"
+          viewBox="0 0 24 24"
+          fill="none"
         >
-          <circle cx={12} cy={12} r={12} fill="currentColor" />
+          <path 
+            d="M12 2L2 7L12 12L22 7L12 2Z" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+          />
+          <path 
+            d="M2 17L12 22L22 17" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+          />
+          <path 
+            d="M2 12L12 17L22 12" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+          />
         </svg>
-        My App
+        LangQuest
       </>
     ),
   },
