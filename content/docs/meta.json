@@ -2,17 +2,7 @@
   "title": "Documentation",
   "pages": [
     "index",
-    {
-      "title": "User Guide",
-      "pages": [
-        "user-guide"
-      ]
-    },
-    {
-      "title": "Platform Features",
-      "pages": [
-        "features"
-      ]
-    }
+    "user-guide",
+    "features"
   ]
 } 

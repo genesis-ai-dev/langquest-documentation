@@ -37,7 +37,7 @@ export default function HomePage() {
           <p className="text-lg text-fd-muted-foreground text-center max-w-3xl mx-auto leading-relaxed">
             LangQuest is a mobile-first platform designed to support Bible translation and language preservation, 
             particularly for low-resource languages. It enables communities to collaboratively translate the Bible 
-            and document linguistic data, fostering cultural and spiritual impact. The platform's mobile-first approach 
+            and document linguistic data, fostering cultural and spiritual impact. The platform&apos;s mobile-first approach 
             ensures accessibility, especially in areas with limited internet, and emphasizes community ownership 
             with open-access outputs.
           </p>
@@ -107,7 +107,7 @@ export default function HomePage() {
           </div>
           <p className="text-lg text-fd-muted-foreground max-w-2xl mx-auto">
             Out of over 7,000 languages, the Bible is fully translated into only 756. With over 3,000 endangered 
-            languages representing about 43% of the world's languages, LangQuest bridges this critical gap by 
+            languages representing about 43% of the world&apos;s languages, LangQuest bridges this critical gap by 
             empowering communities to preserve their linguistic heritage.
           </p>
         </div>
