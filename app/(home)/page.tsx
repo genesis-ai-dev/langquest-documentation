@@ -75,7 +75,7 @@ export default function HomePage() {
                 </tr>
                 <tr>
                   <td className="border border-fd-border p-4 font-medium">Offline Functionality</td>
-                  <td className="border border-fd-border p-4">P2P collaboration, sync for low-connectivity areas.</td>
+                  <td className="border border-fd-border p-4">P2P collaboration, sync for low-connectivity areas (coming soon!).</td>
                 </tr>
                 <tr className="bg-fd-muted/20">
                   <td className="border border-fd-border p-4 font-medium">Anonymity and Security</td>
