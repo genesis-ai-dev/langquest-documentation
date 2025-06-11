@@ -19,26 +19,17 @@ export const baseOptions: BaseLayoutProps = {
           viewBox="0 0 24 24"
           fill="none"
         >
-          <path 
-            d="M12 2L2 7L12 12L22 7L12 2Z" 
+          <circle 
+            cx="12" 
+            cy="12" 
+            r="10" 
             stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
+            strokeWidth="2"
           />
           <path 
-            d="M2 17L12 22L22 17" 
+            d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" 
             stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-          />
-          <path 
-            d="M2 12L12 17L22 12" 
-            stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
+            strokeWidth="2"
           />
         </svg>
         LangQuest
