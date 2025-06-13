@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Community Discussion
+    url: https://github.com/genesis-ai-dev/langquest-documentation/discussions
+    about: Ask questions and discuss with the community
+  - name: 🔗 Project Repository
+    url: https://github.com/genesis-ai-dev/langquest-documentation
+    about: View the source code and contribute directly 

@@ -1,0 +1,78 @@
+name: 🔎 Missing Documentation
+description: Request documentation for topics that aren't covered
+title: "[Missing Docs]: "
+labels: ["documentation", "missing-content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for identifying missing documentation! Please fill out the form below to help us understand what needs to be documented.
+
+  - type: textarea
+    id: missing-topic
+    attributes:
+      label: Missing Topic/Feature
+      description: What topic, feature, or concept needs documentation?
+      placeholder: Describe what's missing from the documentation...
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-needed
+    attributes:
+      label: Why is this documentation needed?
+      description: Explain why this documentation would be valuable and who would use it.
+      placeholder: Describe the use case and importance...
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-location
+    attributes:
+      label: Suggested Location
+      description: Where do you think this documentation should go? (Which section, after which page, etc.)
+      placeholder: Suggest where this documentation should be placed...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: content-type
+    attributes:
+      label: Content Type Needed
+      description: What type of content would be most helpful?
+      options:
+        - label: Tutorial/Guide - Step-by-step instructions
+        - label: Reference - Technical specifications or API docs
+        - label: Concept - Explanation of how something works
+        - label: Examples - Code samples and use cases
+        - label: Troubleshooting - Common issues and solutions
+        - label: FAQ - Frequently asked questions
+        - label: Other
+
+  - type: checkboxes
+    id: audience-level
+    attributes:
+      label: Target Audience
+      description: Who is the primary audience for this documentation?
+      options:
+        - label: Beginners - New to the topic
+        - label: Intermediate - Some experience
+        - label: Advanced - Experienced users
+        - label: All levels - Applicable to everyone
+
+  - type: textarea
+    id: existing-resources
+    attributes:
+      label: Existing Resources
+      description: Are there any existing resources, examples, or partial documentation that could be referenced?
+      placeholder: Links to existing content, examples, or related documentation...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any additional context or specific requirements for this documentation.
+    validations:
+      required: false 

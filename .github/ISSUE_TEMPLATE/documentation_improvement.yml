@@ -1,0 +1,68 @@
+name: 🚀 Documentation Improvement
+description: Suggest improvements to existing documentation content
+title: "[Docs]: "
+labels: ["documentation", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation! Please fill out the form below to suggest improvements.
+
+  - type: input
+    id: page-url
+    attributes:
+      label: Page URL
+      description: The URL of the page that needs improvement
+      placeholder: https://langquest-docs.example.com/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content Issue
+      description: What's wrong or unclear about the current content?
+      placeholder: Describe what's confusing, missing, or incorrect...
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: Suggested Improvement
+      description: How would you improve this content? Be specific.
+      placeholder: Describe your suggested changes or additions...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: improvement-type
+    attributes:
+      label: Type of Improvement
+      description: What kind of improvement is needed?
+      options:
+        - label: Clarity - Make existing content clearer
+        - label: Accuracy - Fix incorrect information
+        - label: Completeness - Add missing information
+        - label: Examples - Add or improve code examples
+        - label: Structure - Reorganize content
+        - label: Language - Fix grammar/spelling/wording
+        - label: Links - Fix or add links
+        - label: Other
+
+  - type: textarea
+    id: target-audience
+    attributes:
+      label: Target Audience
+      description: Who would benefit from this improvement? (beginners, advanced users, specific use cases, etc.)
+      placeholder: Describe who this improvement would help...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any additional context, references, or examples that would help us understand your suggestion.
+    validations:
+      required: false 

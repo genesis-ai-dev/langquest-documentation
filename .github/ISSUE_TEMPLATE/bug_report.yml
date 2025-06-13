@@ -1,0 +1,82 @@
+name: 🐛 Bug Report
+description: Report a bug or issue with the documentation
+title: "[Bug]: "
+labels: ["bug", "documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the form below to help us understand and fix the issue.
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe the bug you encountered...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: What should have happened instead?
+    validations:
+      required: true
+
+  - type: input
+    id: page-url
+    attributes:
+      label: Page URL
+      description: The URL of the page where you encountered the bug
+      placeholder: https://langquest-docs.example.com/...
+    validations:
+      required: false
+
+  - type: textarea
+    id: browser-info
+    attributes:
+      label: Browser & Device Information
+      description: |
+        Please provide information about your browser and device:
+        - Browser (Chrome, Firefox, Safari, etc.)
+        - Version
+        - Operating System
+        - Device (Desktop, Mobile, Tablet)
+      placeholder: |
+        Browser: Chrome 120.0
+        OS: macOS 14.0
+        Device: Desktop
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here.
+    validations:
+      required: false 
