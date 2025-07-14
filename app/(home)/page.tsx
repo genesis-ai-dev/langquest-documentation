@@ -39,51 +39,8 @@ export default function HomePage() {
             particularly for low-resource languages. It enables communities to collaboratively translate the Bible 
             and document linguistic data, fostering cultural and spiritual impact. The platform&apos;s mobile-first approach 
             ensures accessibility, especially in areas with limited internet, and emphasizes community ownership 
-            with open-access outputs.
+            with open-access outputs. Learn more in our <Link href="/docs">documentation</Link>.
           </p>
-        </div>
-      </section>
-
-      {/* Key Features Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-fd-border rounded-lg">
-              <thead>
-                <tr className="bg-fd-muted">
-                  <th className="border border-fd-border p-4 text-left font-semibold">Feature</th>
-                  <th className="border border-fd-border p-4 text-left font-semibold">Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-fd-border p-4 font-medium">Projects and Quests</td>
-                  <td className="border border-fd-border p-4">Organize translation efforts, manage membership and content.</td>
-                </tr>
-                <tr className="bg-fd-muted/20">
-                  <td className="border border-fd-border p-4 font-medium">Multimedia Assets</td>
-                  <td className="border border-fd-border p-4">Use text, audio, images for contextual translation support.</td>
-                </tr>
-                <tr>
-                  <td className="border border-fd-border p-4 font-medium">Translation and Voting</td>
-                  <td className="border border-fd-border p-4">Submit and vote on translations for peer-validated quality.</td>
-                </tr>
-                <tr className="bg-fd-muted/20">
-                  <td className="border border-fd-border p-4 font-medium">Gamification</td>
-                  <td className="border border-fd-border p-4">Leaderboards, scores, achievements for sustained engagement.</td>
-                </tr>
-                <tr>
-                  <td className="border border-fd-border p-4 font-medium">Offline Functionality</td>
-                  <td className="border border-fd-border p-4">P2P collaboration, sync for low-connectivity areas (coming soon!).</td>
-                </tr>
-                <tr className="bg-fd-muted/20">
-                  <td className="border border-fd-border p-4 font-medium">Anonymity and Security</td>
-                  <td className="border border-fd-border p-4">Non-personally identifiable registration, app disguises for safety.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
       </section>
 
@@ -117,36 +74,26 @@ export default function HomePage() {
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center p-6">
               <div className="w-12 h-12 bg-fd-primary text-fd-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
-              <h3 className="font-semibold mb-2">Register</h3>
-              <p className="text-sm text-fd-muted-foreground">Create an account with anonymous registration for safety</p>
+              <h3 className="font-semibold mb-2">Register & Join</h3>
+              <p className="text-sm text-fd-muted-foreground">Create an anonymous account and join a translation project</p>
             </div>
             <div className="text-center p-6">
               <div className="w-12 h-12 bg-fd-primary text-fd-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
-              <h3 className="font-semibold mb-2">Join Project</h3>
-              <p className="text-sm text-fd-muted-foreground">Select translation projects based on your language expertise</p>
+              <h3 className="font-semibold mb-2">Select Quest</h3>
+              <p className="text-sm text-fd-muted-foreground">Choose specific translation tasks with multimedia support</p>
             </div>
             <div className="text-center p-6">
               <div className="w-12 h-12 bg-fd-primary text-fd-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
-              <h3 className="font-semibold mb-2">Select Quest</h3>
-              <p className="text-sm text-fd-muted-foreground">Choose specific translation tasks within projects</p>
+              <h3 className="font-semibold mb-2">Translate & Vote</h3>
+              <p className="text-sm text-fd-muted-foreground">Submit translations and participate in peer review</p>
             </div>
             <div className="text-center p-6">
               <div className="w-12 h-12 bg-fd-primary text-fd-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
-              <h3 className="font-semibold mb-2">Submit Translations</h3>
-              <p className="text-sm text-fd-muted-foreground">Provide text or audio translations with multimedia context</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-12 h-12 bg-fd-primary text-fd-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">5</div>
-              <h3 className="font-semibold mb-2">Vote & Review</h3>
-              <p className="text-sm text-fd-muted-foreground">Participate in peer validation of translation quality</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="w-12 h-12 bg-fd-primary text-fd-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">6</div>
               <h3 className="font-semibold mb-2">Track Progress</h3>
-              <p className="text-sm text-fd-muted-foreground">Monitor contributions through gamification and leaderboards</p>
+              <p className="text-sm text-fd-muted-foreground">Monitor contributions through gamification elements</p>
             </div>
           </div>
           <div className="text-center mt-8">
@@ -176,10 +123,16 @@ export default function HomePage() {
               Explore User Guide
             </Link>
             <Link
-              href="/docs"
+              href="/docs/features"
               className="px-8 py-3 border border-fd-border rounded-lg font-semibold hover:bg-fd-muted/50 transition-colors"
             >
-              Browse Documentation
+              View Features
+            </Link>
+            <Link
+              href="/docs/roadmap"
+              className="px-8 py-3 border border-fd-border rounded-lg font-semibold hover:bg-fd-muted/50 transition-colors"
+            >
+              See Roadmap
             </Link>
           </div>
         </div>
