@@ -1,0 +1,73 @@
+name: Update Developer Documentation
+
+on:
+  # Run on schedule (daily at 6 AM UTC)
+  schedule:
+    - cron: '0 6 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+  # Run when changes are pushed to main
+  push:
+    branches: [main]
+
+  # Run when a PR is merged
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+jobs:
+  update-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout documentation repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch developer documentation
+        run: npm run docs:fetch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add content/docs/developers/
+          git add content/docs/meta.json
+          git commit -m "📝 Update developer documentation from main repository"
+          git push
+
+      - name: Create summary
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          echo "✅ Developer documentation updated successfully!" >> $GITHUB_STEP_SUMMARY
+          echo "Updated files:" >> $GITHUB_STEP_SUMMARY
+          git diff --name-only HEAD~1 HEAD >> $GITHUB_STEP_SUMMARY
+
+      - name: No changes summary
+        if: steps.changes.outputs.changes == 'false'
+        run: |
+          echo "ℹ️ No changes detected in developer documentation." >> $GITHUB_STEP_SUMMARY

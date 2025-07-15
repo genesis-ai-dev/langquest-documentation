@@ -1,0 +1,8 @@
+{
+  "title": "Developer Documentation",
+  "description": "Technical documentation automatically generated from the main LangQuest repository",
+  "pages": [
+    "README",
+    "architecture"
+  ]
+}
