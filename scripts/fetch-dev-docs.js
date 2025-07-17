@@ -276,6 +276,23 @@ async function processTypedocFile(content, relativePath, baseDir) {
         }
     );
 
+    // Fix image paths - convert _media/ to /readme_images/
+    processedContent = processedContent.replace(
+        /!\[([^\]]*)\]\(readme_images\/([^)]+)\)/g,
+        '![$1](/readme_images/$2)'
+    );
+
+    processedContent = processedContent.replace(
+        /!\[([^\]]*)\]\(_media\/([^)]+)\)/g,
+        '![$1](/readme_images/$2)'
+    );
+
+    // Also handle cases where there might be extra spaces or different formatting
+    processedContent = processedContent.replace(
+        /!\[\s*([^\]]*)\s*\]\s*\(\s*_media\/([^)]+)\s*\)/g,
+        '![$1](/readme_images/$2)'
+    );
+
     // Add a header note
     processedContent = `# ${title}
 
@@ -367,6 +384,8 @@ async function processMarkdownFile(content, originalPath) {
         const mediaMatches = processedContent.match(/!\[([^\]]*)\]\(_media\/([^)]+)\)/g);
         if (mediaMatches) {
             console.log('Found _media/ paths:', mediaMatches);
+        } else {
+            console.log('No _media/ paths found initially');
         }
     }
 
@@ -377,9 +396,23 @@ async function processMarkdownFile(content, originalPath) {
     );
 
     // Handle _media/ paths and map them to readme_images/
+    // Fixed regex to properly match the pattern
+    const originalContentForDebug = processedContent;
     processedContent = processedContent.replace(
         /!\[([^\]]*)\]\(_media\/([^)]+)\)/g,
-        '![$1](/readme_images/$2)'
+        (match, alt, filename) => {
+            console.log(`Converting: ${match} -> ![${alt}](/readme_images/${filename})`);
+            return `![${alt}](/readme_images/${filename})`;
+        }
+    );
+
+    // Also handle cases where there might be extra spaces or different formatting
+    processedContent = processedContent.replace(
+        /!\[\s*([^\]]*)\s*\]\s*\(\s*_media\/([^)]+)\s*\)/g,
+        (match, alt, filename) => {
+            console.log(`Converting (with spaces): ${match} -> ![${alt}](/readme_images/${filename})`);
+            return `![${alt}](/readme_images/${filename})`;
+        }
     );
 
     // Debug: log content after processing
@@ -387,6 +420,7 @@ async function processMarkdownFile(content, originalPath) {
         const stillHasMedia = processedContent.match(/!\[([^\]]*)\]\(_media\/([^)]+)\)/g);
         if (stillHasMedia) {
             console.log('ERROR: Still has _media/ paths after processing:', stillHasMedia);
+            console.log('Sample content around _media:', processedContent.substring(processedContent.indexOf('_media') - 50, processedContent.indexOf('_media') + 100));
         } else {
             console.log('✓ All _media/ paths converted to /readme_images/');
         }
@@ -419,6 +453,16 @@ async function extractAPIDocumentation() {
                 const localContent = await fs.readFile(localReadmePath, 'utf-8');
                 file = { content: localContent };
                 console.log('✓ Using local README.md (preferred over API)');
+
+                // Debug: check what's actually in the README
+                const hasMediaPaths = localContent.includes('_media/');
+                const hasReadmeImagesPaths = localContent.includes('readme_images/');
+                console.log(`DEBUG: Local README has _media/ paths: ${hasMediaPaths}`);
+                console.log(`DEBUG: Local README has readme_images/ paths: ${hasReadmeImagesPaths}`);
+                if (hasMediaPaths) {
+                    const mediaMatches = localContent.match(/!\[([^\]]*)\]\(_media\/([^)]+)\)/g);
+                    console.log('DEBUG: Found _media/ image references:', mediaMatches);
+                }
             } catch (error) {
                 console.warn('Could not read local README.md, falling back to API:', error.message);
                 file = await fetchFileContent(filePath);
