@@ -293,6 +293,24 @@ async function processTypedocFile(content, relativePath, baseDir) {
         '![$1](/readme_images/$2)'
     );
 
+    // Fix JavaScript-like syntax in documentation that would cause MDX errors
+    // Escape curly braces in "Returns { ... }" patterns to prevent MDX from treating them as executable code
+    processedContent = processedContent.replace(
+        /Returns\s*\{\s*([^}]+)\s*\}/g,
+        (match, content) => {
+            // Replace the match with backticks to make it code
+            return `Returns \`{ ${content} }\``;
+        }
+    );
+
+    // Also handle similar patterns like "object = { ... }"
+    processedContent = processedContent.replace(
+        /(\w+)\s*=\s*\{([^}]+)\}/g,
+        (match, varName, content) => {
+            return `${varName} = \`{ ${content} }\``;
+        }
+    );
+
     // Add a header note
     processedContent = `# ${title}
 
