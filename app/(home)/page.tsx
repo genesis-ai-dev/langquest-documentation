@@ -44,9 +44,9 @@ export default function HomePage() {
           <p className="text-lg text-fd-muted-foreground text-center max-w-3xl mx-auto leading-relaxed">
             LangQuest was born from a simple need: a reliable way to capture
             oral Bible translations and more, even in the most remote
-            conditions. It's designed to handle real-world conditions:
+            conditions. It&apos;s designed to handle real-world conditions:
             offline-first 📡, resilient 💪, and simple to use on everyday mobile
-            devices 📱. Whether you're translating God's Word, preserving
+            devices 📱. Whether you&apos;re translating God&apos;s Word, preserving
             culture, or equipping your community for the future—LangQuest gives
             you the tools to do it on your terms, even off the grid. Learn more
             in our{' '}
@@ -123,7 +123,7 @@ export default function HomePage() {
                 Scripture First, Not Scripture Only
               </h3>
               <p className="text-sm text-fd-muted-foreground">
-                LangQuest is already being used to translate the Bible, but it's
+                LangQuest is already being used to translate the Bible, but it&apos;s
                 built for more: traditional stories, oral histories, and
                 educational materials.
               </p>
@@ -185,13 +185,13 @@ export default function HomePage() {
               href="/docs/features"
               className="px-8 py-3 border border-fd-border rounded-lg font-semibold hover:bg-fd-muted/50 transition-colors"
             >
-              See What's Possible
+              See What&apos;s Possible
             </Link>
             <Link
               href="/docs/roadmap"
               className="px-8 py-3 border border-fd-border rounded-lg font-semibold hover:bg-fd-muted/50 transition-colors"
             >
-              See What's Coming
+              See What&apos;s Coming
             </Link>
           </div>
         </div>
