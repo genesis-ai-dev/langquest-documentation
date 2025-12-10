@@ -38,7 +38,7 @@ Obtain the .env file by logging into EAS and running the `eas env:pull <producti
    - Return to Settings > System > Developer options
    - Enable "USB debugging"
 
-6. Run the app by following the [Expo environment setup guide](https://docs.expo.dev/get-started/set-up-your-environment/) for your platform, **with the supplemental pointers below**:
+6. Run the app by following the [Expo environment setup guide](https://docs.expo.dev/get-started/set-up-your-environment/?mode=development-build&buildEnv=local) for your platform, **with the supplemental pointers below**:
 
 - Recommended to run on physical android device (emulator may have minimal limitations but should allow for most functionality)
 
@@ -51,6 +51,8 @@ Obtain the .env file by logging into EAS and running the `eas env:pull <producti
 ### There are two ways to run the app:
 
 #### 1. EAS Development Build (`eas build --platform android --profile development`)
+
+[Expo environment setup guide for EAS builds](https://docs.expo.dev/get-started/set-up-your-environment/?mode=development-build)
 
 ![EAS Build](/readme_images/yes_eas.jpg)
 
@@ -70,6 +72,8 @@ adb logcat --pid=$(adb shell pidof -s com.etengenesis.langquest)
 #### 2. Local Development (`npm run android`)
 
 ![Local Build](/readme_images/no_eas.jpg)
+
+[Expo environment setup guide for EAS builds](https://docs.expo.dev/get-started/set-up-your-environment/?mode=development-build&buildEnv=local)
 
 - Runs the app directly on your connected Android device/emulator
 - Enables real-time code updates (hot reload)
@@ -106,6 +110,32 @@ adb logcat --pid=$(adb shell pidof -s com.etengenesis.langquest)
   npm run env:clean
   ```
 
+  - This resets your local database and applies the latest migrations found in `supabase/migrations/` to your local instance.
+  - To verify which migrations are applied:
+    - In Supabase Studio: open `http://localhost:54323` → Database → Migrations
+    - Via CLI:
+      - Direct: `npx supabase migration list --local`
+      - Or using the project alias: `npm run supabase migration list -- --local`
+
+- If the environment stopped after cleaning, start it again:
+
+  ```bash
+  npm run env
+  ```
+
+- Populate closure tables after seeding (choose one):
+
+  - From Supabase Studio (SQL editor):
+    ```sql
+    SELECT public.populate_closures();
+    ```
+
+  Note: The function returns void; Studio may show an empty result. To verify closure rows exist:
+  ```sql
+  SELECT COUNT(*) AS project_closure_rows FROM public.project_closure;
+  SELECT COUNT(*) AS quest_closure_rows FROM public.quest_closure;
+  ```
+
 ### Usage
 
 #### Making Database Changes
@@ -121,7 +151,7 @@ adb logcat --pid=$(adb shell pidof -s com.etengenesis.langquest)
 4. Generate a migration file with a descriptive name to describe your changes:
 
    ```bash
-   npm run supabase:migration:diff -- "your_migration_description"
+   npm run supabase db diff -- -f "your_migration_description"
    ```
 
    > This creates a timestamped SQL migration file in the `supabase/migrations` directory. The script automatically handles storage permissions issues during migration generation.
@@ -211,7 +241,6 @@ This setup allows you to test the app on a physical Android device while it's co
    npm run start -- --localhost --android
    ```
    - Do **not** press `a` to run on Android yet.
-   - If port 8081 is in use, add `--port 8082` (and adjust the reverse command below).
 
 4. In a new terminal, set up ADB reverse proxy for USB tunneling:
    ```bash

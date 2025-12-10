@@ -14,13 +14,13 @@
     "@microsoft/tsdoc": "^0.15.1",
     "@octokit/rest": "^22.0.0",
     "fumadocs-core": "15.4.2",
-    "fumadocs-mdx": "11.6.6",
+    "fumadocs-mdx": "^11.6.6",
     "fumadocs-ui": "15.4.2",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.515.0",
-    "next": "15.3.6",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "next": "15.4.8",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
     "remark": "^15.0.1",
     "remark-mdx-frontmatter": "^5.2.0",
     "typedoc": "^0.28.7",
@@ -33,7 +33,7 @@
     "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
     "eslint": "^8",
-    "eslint-config-next": "15.3.2",
+    "eslint-config-next": "15.4.8",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.7",
     "typescript": "^5.8.3"
@@ -41,7 +41,9 @@
   "pnpm": {
     "overrides": {
       "brace-expansion@1.1.11": "1.1.12",
-      "brace-expansion@2.0.1": "2.0.2"
+      "brace-expansion@2.0.1": "2.0.2",
+      "gray-matter>js-yaml": "^3.14.2",
+      "mdast-util-to-hast": "^13.2.1"
     }
   }
 }
