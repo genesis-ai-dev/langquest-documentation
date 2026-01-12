@@ -1,3 +1,30 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
+
+/* Vertical Video Styles for 9:16 Loom videos */
+.vertical-video-container {
+  max-width: 400px;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-video-wrapper {
+  position: relative;
+  padding-bottom: 177.78%; /* 9:16 aspect ratio (16/9 * 100%) */
+  height: 0;
+  overflow: hidden;
+}
+
+.vertical-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  transform: scale(1.0); /* Scale to crop Loom's black bars */
+  transform-origin: center;
+}
