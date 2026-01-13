@@ -1,0 +1,60 @@
+---
+title: hybridFetch
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# hybridFetch
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useHybridQuery](/docs/developers/..-index) / hybridFetch
+
+# Function: hybridFetch()
+
+> **hybridFetch**\<`T`\>(`config`): `Promise`\<`T`[]\>
+
+Defined in: [hooks/useHybridQuery.ts:416](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useHybridQuery.ts#L416)
+
+hybridFetch
+
+A standalone function that always fetches local data first, then cloud data when available,
+and merges with local priority. Can be used outside of React components.
+
+## Type Parameters
+
+### T
+
+`T` *extends* `Record`\<`string`, `unknown`\>
+
+## Parameters
+
+### config
+
+`HybridFetchConfig`\<`T`\> & `object`
+
+## Returns
+
+`Promise`\<`T`[]\>
+
+## Example
+
+```ts
+const projects = await hybridFetch({
+  onlineFn: async () => {
+    const response = await system.supabaseConnector.client
+      .from('project')
+      .select('*')
+      .eq('visible', true);
+    return response.data || [];
+  },
+  offlineFn: async () => {
+    return await system.db.query.project.findMany({
+      where: (fields, { eq }) => eq(fields.visible, true)
+    });
+  }
+});
+```

@@ -1,0 +1,44 @@
+---
+title: renameAsset
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# renameAsset
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [database\_services/assetService](/docs/developers/..-index) / renameAsset
+
+# Function: renameAsset()
+
+> **renameAsset**(`assetId`, `newName`): `Promise`\<`void`\>
+
+Defined in: [database\_services/assetService.ts:15](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/assetService.ts#L15)
+
+Update an asset's name - ONLY for local-only assets
+
+## Parameters
+
+### assetId
+
+`string`
+
+The ID of the asset to rename
+
+### newName
+
+`string`
+
+The new name for the asset
+
+## Returns
+
+`Promise`\<`void`\>
+
+## Throws
+
+Error if asset is synced (immutable)

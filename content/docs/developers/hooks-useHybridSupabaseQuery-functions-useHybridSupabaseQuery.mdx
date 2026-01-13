@@ -1,0 +1,145 @@
+---
+title: useHybridSupabaseQuery
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useHybridSupabaseQuery
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useHybridSupabaseQuery](/docs/developers/..-index) / useHybridSupabaseQuery
+
+# Function: useHybridSupabaseQuery()
+
+> **useHybridSupabaseQuery**\<`T`\>(`options`): `object`
+
+Defined in: [hooks/useHybridSupabaseQuery.ts:136](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useHybridSupabaseQuery.ts#L136)
+
+useHybridSupabaseQuery
+
+A hook that always queries local/offline data first, then cloud data when available,
+and merges them with local data taking priority. Follows the offline-first pattern.
+
+## Type Parameters
+
+### T
+
+`T` *extends* `Record`\<`string`, `unknown`\>
+
+## Parameters
+
+### options
+
+`HybridSupabaseQueryOptions`\<`T`\>
+
+## Returns
+
+`object`
+
+### data
+
+> **data**: `any` = `finalData`
+
+### isLoading
+
+> **isLoading**: `any`
+
+### error
+
+> **error**: `any`
+
+### isError
+
+> **isError**: `any`
+
+### isFetching
+
+> **isFetching**: `any`
+
+### isSuccess
+
+> **isSuccess**: `any` = `localQuery.isSuccess`
+
+### refetch()
+
+> **refetch**: () => `void`
+
+#### Returns
+
+`void`
+
+### dataUpdatedAt
+
+> **dataUpdatedAt**: `number`
+
+### errorUpdatedAt
+
+> **errorUpdatedAt**: `number`
+
+### failureCount
+
+> **failureCount**: `any`
+
+### failureReason
+
+> **failureReason**: `any`
+
+### fetchStatus
+
+> **fetchStatus**: `any` = `localQuery.fetchStatus`
+
+### isInitialLoading
+
+> **isInitialLoading**: `any`
+
+### isLoadingError
+
+> **isLoadingError**: `any`
+
+### isPaused
+
+> **isPaused**: `any`
+
+### isPlaceholderData
+
+> **isPlaceholderData**: `any`
+
+### isRefetchError
+
+> **isRefetchError**: `any`
+
+### isRefetching
+
+> **isRefetching**: `any`
+
+### isStale
+
+> **isStale**: `any`
+
+### status
+
+> **status**: `string`
+
+## Example
+
+```ts
+// Using unified query
+const { data, isLoading, error } = useHybridSupabaseQuery({
+  queryKey: ['projects'],
+  query: db.select().from(projectTable).where(eq(projectTable.visible, true)),
+});
+
+// Using separate queries
+const { data, isLoading, error } = useHybridSupabaseQuery({
+  queryKey: ['projects'],
+  onlineFn: async () => {
+    const response = await supabase.from('project').select('*').eq('visible', true);
+    return response.data || [];
+  },
+  offlineQuery: db.select().from(projectTable).where(eq(projectTable.visible, true)),
+});
+```

@@ -1,0 +1,41 @@
+---
+title: getDownloadStatus
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# getDownloadStatus
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useDownloads](/docs/developers/..-index) / getDownloadStatus
+
+# Function: getDownloadStatus()
+
+> **getDownloadStatus**(`recordTable`, `recordId`, `currentUserId?`): `Promise`\<`boolean`\>
+
+Defined in: [hooks/useDownloads.ts:68](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useDownloads.ts#L68)
+
+Recursively checks if a record and all its children are downloaded
+by comparing server records with locally synced records
+
+## Parameters
+
+### recordTable
+
+`string` | `number` | `symbol`
+
+### recordId
+
+`string`
+
+### currentUserId?
+
+`string`
+
+## Returns
+
+`Promise`\<`boolean`\>

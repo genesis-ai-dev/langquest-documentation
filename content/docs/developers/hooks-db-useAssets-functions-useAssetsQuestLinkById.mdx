@@ -1,0 +1,121 @@
+---
+title: useAssetsQuestLinkById
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useAssetsQuestLinkById
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-..-modules) / [hooks/db/useAssets](/docs/developers/..-index) / useAssetsQuestLinkById
+
+# Function: useAssetsQuestLinkById()
+
+> **useAssetsQuestLinkById**(`quest_id`, `asset_id`): `object`
+
+Defined in: [hooks/db/useAssets.ts:1019](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/db/useAssets.ts#L1019)
+
+Returns `{ assets, isLoading, error  }`
+Fetches assets by quest ID from Supabase (online) or local Drizzle DB (offline)
+
+## Parameters
+
+### quest\_id
+
+`string` | `undefined`
+
+### asset\_id
+
+`string` | `undefined`
+
+## Returns
+
+`object`
+
+### quest\_asset\_link
+
+> **quest\_asset\_link**: `any`
+
+### isDataLoading
+
+> **isDataLoading**: `any`
+
+### error
+
+> **error**: `any`
+
+### isError
+
+> **isError**: `any`
+
+### isFetching
+
+> **isFetching**: `any`
+
+### isSuccess
+
+> **isSuccess**: `any` = `localQuery.isSuccess`
+
+### refetch()
+
+> **refetch**: () => `void`
+
+#### Returns
+
+`void`
+
+### dataUpdatedAt
+
+> **dataUpdatedAt**: `number`
+
+### errorUpdatedAt
+
+> **errorUpdatedAt**: `number`
+
+### failureCount
+
+> **failureCount**: `any`
+
+### failureReason
+
+> **failureReason**: `any`
+
+### fetchStatus
+
+> **fetchStatus**: `any` = `localQuery.fetchStatus`
+
+### isInitialLoading
+
+> **isInitialLoading**: `any`
+
+### isLoadingError
+
+> **isLoadingError**: `any`
+
+### isPaused
+
+> **isPaused**: `any`
+
+### isPlaceholderData
+
+> **isPlaceholderData**: `any`
+
+### isRefetchError
+
+> **isRefetchError**: `any`
+
+### isRefetching
+
+> **isRefetching**: `any`
+
+### isStale
+
+> **isStale**: `any`
+
+### status
+
+> **status**: `string`

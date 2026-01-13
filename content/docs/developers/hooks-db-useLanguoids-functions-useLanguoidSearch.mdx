@@ -1,0 +1,54 @@
+---
+title: useLanguoidSearch
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useLanguoidSearch
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-..-modules) / [hooks/db/useLanguoids](/docs/developers/..-index) / useLanguoidSearch
+
+# Function: useLanguoidSearch()
+
+> **useLanguoidSearch**(`searchQuery`, `options`): `any`
+
+Defined in: [hooks/db/useLanguoids.ts:275](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/db/useLanguoids.ts#L275)
+
+Search languoids by name and aliases
+When online: calls RPC function for server-side search across 300k+ records
+When offline: falls back to local LIKE query on synced data
+
+## Parameters
+
+### searchQuery
+
+`string`
+
+The search term (minimum 2 characters)
+
+### options
+
+Search options
+
+#### limit?
+
+`number`
+
+#### uiReadyOnly?
+
+`boolean`
+
+#### enabled?
+
+`boolean`
+
+## Returns
+
+`any`
+
+Search results with loading/error state

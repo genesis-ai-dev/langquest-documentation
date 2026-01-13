@@ -1,0 +1,52 @@
+---
+title: useOptimisticQuery
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useOptimisticQuery
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useDeferredQuery](/docs/developers/..-index) / useOptimisticQuery
+
+# Function: useOptimisticQuery()
+
+> **useOptimisticQuery**\<`TQueryFnData`, `TError`, `TData`, `TQueryKey`\>(`options`): `UseQueryResult`\<`TData`, `TError`\>
+
+Defined in: [hooks/useDeferredQuery.ts:56](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useDeferredQuery.ts#L56)
+
+Optimistically shows cached data immediately, then refreshes after interactions
+
+This provides instant feedback for navigation while ensuring data freshness
+
+## Type Parameters
+
+### TQueryFnData
+
+`TQueryFnData` = `unknown`
+
+### TError
+
+`TError` = `Error`
+
+### TData
+
+`TData` = `TQueryFnData`
+
+### TQueryKey
+
+`TQueryKey` *extends* readonly `unknown`[] = readonly `unknown`[]
+
+## Parameters
+
+### options
+
+`UseQueryOptions`\<`TQueryFnData`, `TError`, `TData`, `TQueryKey`\>
+
+## Returns
+
+`UseQueryResult`\<`TData`, `TError`\>

@@ -1,0 +1,27 @@
+---
+title: findCorruptedAttachments
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# findCorruptedAttachments
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [services/corruptedAttachmentsService](/docs/developers/..-index) / findCorruptedAttachments
+
+# Function: findCorruptedAttachments()
+
+> **findCorruptedAttachments**(): `Promise`\<[`CorruptedAttachment`](/docs/developers/..-interfaces-CorruptedAttachment)[]\>
+
+Defined in: [services/corruptedAttachmentsService.ts:22](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/services/corruptedAttachmentsService.ts#L22)
+
+Find all corrupted attachments in the database.
+Corrupted attachments are those with blob URLs in id, local_uri, or filename fields.
+
+## Returns
+
+`Promise`\<[`CorruptedAttachment`](/docs/developers/..-interfaces-CorruptedAttachment)[]\>

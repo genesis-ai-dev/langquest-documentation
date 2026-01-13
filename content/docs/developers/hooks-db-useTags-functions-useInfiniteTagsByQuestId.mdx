@@ -1,0 +1,110 @@
+---
+title: useInfiniteTagsByQuestId
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useInfiniteTagsByQuestId
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-..-modules) / [hooks/db/useTags](/docs/developers/..-index) / useInfiniteTagsByQuestId
+
+# Function: useInfiniteTagsByQuestId()
+
+> **useInfiniteTagsByQuestId**(`quest_id`): `object`
+
+Defined in: [hooks/db/useTags.ts:310](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/db/useTags.ts#L310)
+
+Returns `{ tags, isLoading, error, fetchNextPage, hasNextPage, isFetchingNextPage  }`
+Fetches tags by quest ID with infinite scrolling
+Gets all unique tags that belong to the specified quest
+
+## Parameters
+
+### quest\_id
+
+`string`
+
+## Returns
+
+`object`
+
+### data
+
+> **data**: `object` = `mergedData`
+
+#### data.pages
+
+> **pages**: `HybridPageData`\<`InferSelectModel`\<`any`\>\>[] = `mergedPages`
+
+#### data.pageParams
+
+> **pageParams**: `any`
+
+### fetchNextPage()
+
+> **fetchNextPage**: () => `void`
+
+#### Returns
+
+`void`
+
+### fetchPreviousPage()
+
+> **fetchPreviousPage**: () => `void`
+
+#### Returns
+
+`void`
+
+### hasNextPage
+
+> **hasNextPage**: `any`
+
+### hasPreviousPage
+
+> **hasPreviousPage**: `any`
+
+### isFetchingNextPage
+
+> **isFetchingNextPage**: `any`
+
+### isFetchingPreviousPage
+
+> **isFetchingPreviousPage**: `any`
+
+### isLoading
+
+> **isLoading**: `any`
+
+### isError
+
+> **isError**: `any`
+
+### error
+
+> **error**: `any`
+
+### isFetching
+
+> **isFetching**: `any`
+
+### isSuccess
+
+> **isSuccess**: `any` = `localQuery.isSuccess`
+
+### refetch()
+
+> **refetch**: () => `void`
+
+#### Returns
+
+`void`
+
+### status
+
+> **status**: `string`

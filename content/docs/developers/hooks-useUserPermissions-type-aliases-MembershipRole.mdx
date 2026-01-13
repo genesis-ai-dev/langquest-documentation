@@ -1,0 +1,47 @@
+---
+title: MembershipRole
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# MembershipRole
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useUserPermissions](/docs/developers/..-index) / MembershipRole
+
+# Type Alias: MembershipRole
+
+> **MembershipRole** = `"member"` \| `"admin"` \| `"owner"` \| `null` \| `undefined`
+
+Defined in: [hooks/useUserPermissions.ts:42](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useUserPermissions.ts#L42)
+
+# Access Control Constraints
+| Action/Element    | Non-member       | Member | Owner | Notes                                                              | Action |
+| ----------------- | ---------------- | ------ | ----- | ------------------------------------------------------------------ | ------ |
+| **Core Actions**  |                  |        |       |                                                                    | |
+| Open Project      | Gate (bypass)    | ✓      | ✓     | Only gated if private                                              | open_project |
+| Download          | Gate (bypass)    | ✓      | ✓     | Only gated if private                                              | download |
+| Contribute        | Gate (no bypass) | ✓      | ✓     | Includes voting, translation, transcription; only gated if private | contribute |
+| View Membership   | Gate (no bypass) | ✓      | ✓     | Always gated regardless of privacy                                 | view_membership |
+| Manage            | ✕                | ✕      | ✓     |                                                                    | manage |
+| **UI Elements**   |                  |        |       |                                                                    |        |
+| Membership Icon   | -                | 👤     | 🏅    |                                                                    | project_card_membership_icon |
+| Settings Cog      | ✕                | ✕      | ✓     |                                                                    | project_settings_cog |
+| Send Invite       | ✕                | ✕      | ✓     |                                                                    | send_invite_section |
+| Promote Member    | ✕                | ✕      | ✓     |                                                                    | promote_member_button |
+| Remove Member     | ✕                | ✕      | ✓     |                                                                    | remove_member_button |
+| Withdraw Invite   | ✕                | ✕      | ✓     |                                                                    | withdraw_invite_button |
+| **Lock Controls** |                  |        |       |                                                                    |        |
+| Translate Lock    | ⚡                | ✕      | ✕     | Visible only if private                                            | translate_button_lock |
+| Transcribe Lock   | ⚡                | ✕      | ✕     | Visible only if private                                            | transcribe_button_lock |
+| Vote Lock         | ⚡                | ✕      | ✕     | Visible only if private                                            | vote_button_lock |
+
+Legend:
+- ✓ = Allowed/Visible
+- ✕ = Hidden/Not Allowed
+- ⚡ = Conditionally Visible
+- Gate = Access Gate Shown

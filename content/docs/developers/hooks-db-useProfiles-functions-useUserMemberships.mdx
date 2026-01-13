@@ -1,0 +1,55 @@
+---
+title: useUserMemberships
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useUserMemberships
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-..-modules) / [hooks/db/useProfiles](/docs/developers/..-index) / useUserMemberships
+
+# Function: useUserMemberships()
+
+> **useUserMemberships**(`userId?`): `object`
+
+Defined in: [hooks/db/useProfiles.ts:66](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/db/useProfiles.ts#L66)
+
+Hook to get user memberships from local DB using PowerSync/TanStack Query
+Replaces useSessionMemberships from SessionCacheContext
+
+## Parameters
+
+### userId?
+
+`string`
+
+## Returns
+
+`object`
+
+### userMemberships
+
+> **userMemberships**: `any`[] = `memberships`
+
+### isUserMembershipsLoading
+
+> **isUserMembershipsLoading**: `any` = `isLoading`
+
+### getUserMembership()
+
+> **getUserMembership**: (`projectId`) => `any`
+
+#### Parameters
+
+##### projectId
+
+`string`
+
+#### Returns
+
+`any`

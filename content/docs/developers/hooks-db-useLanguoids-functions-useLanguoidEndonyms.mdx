@@ -1,0 +1,35 @@
+---
+title: useLanguoidEndonyms
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useLanguoidEndonyms
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-..-modules) / [hooks/db/useLanguoids](/docs/developers/..-index) / useLanguoidEndonyms
+
+# Function: useLanguoidEndonyms()
+
+> **useLanguoidEndonyms**(`languoidIds`): `any`
+
+Defined in: [hooks/db/useLanguoids.ts:175](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/db/useLanguoids.ts#L175)
+
+Returns a map of languoid_id -> endonym name
+Fetches endonyms (native names) for a list of languoids
+Prefers endonyms where label_languoid_id = subject_languoid_id (self-referential)
+Only includes endonyms that have 'lexvo' in their source_names array
+
+## Parameters
+
+### languoidIds
+
+`string`[]
+
+## Returns
+
+`any`

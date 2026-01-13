@@ -1,0 +1,118 @@
+---
+title: useTagCategoriesByQuestId
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useTagCategoriesByQuestId
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-..-modules) / [hooks/db/useTags](/docs/developers/..-index) / useTagCategoriesByQuestId
+
+# Function: useTagCategoriesByQuestId()
+
+> **useTagCategoriesByQuestId**(`quest_id`): `object`
+
+Defined in: [hooks/db/useTags.ts:174](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/db/useTags.ts#L174)
+
+Returns `{ tagCategories, isLoading, error  }`
+Fetches tag categories by quest ID using the asset_tag_categories view
+This is more efficient for getting just the categories without individual tag details
+
+## Parameters
+
+### quest\_id
+
+`string`
+
+## Returns
+
+`object`
+
+### tagCategories
+
+> **tagCategories**: `any`
+
+### isTagCategoriesLoading
+
+> **isTagCategoriesLoading**: `any`
+
+### error
+
+> **error**: `any`
+
+### isError
+
+> **isError**: `any`
+
+### isFetching
+
+> **isFetching**: `any`
+
+### isSuccess
+
+> **isSuccess**: `any` = `localQuery.isSuccess`
+
+### refetch()
+
+> **refetch**: () => `void`
+
+#### Returns
+
+`void`
+
+### dataUpdatedAt
+
+> **dataUpdatedAt**: `number`
+
+### errorUpdatedAt
+
+> **errorUpdatedAt**: `number`
+
+### failureCount
+
+> **failureCount**: `any`
+
+### failureReason
+
+> **failureReason**: `any`
+
+### fetchStatus
+
+> **fetchStatus**: `any` = `localQuery.fetchStatus`
+
+### isInitialLoading
+
+> **isInitialLoading**: `any`
+
+### isLoadingError
+
+> **isLoadingError**: `any`
+
+### isPaused
+
+> **isPaused**: `any`
+
+### isPlaceholderData
+
+> **isPlaceholderData**: `any`
+
+### isRefetchError
+
+> **isRefetchError**: `any`
+
+### isRefetching
+
+> **isRefetching**: `any`
+
+### isStale
+
+> **isStale**: `any`
+
+### status
+
+> **status**: `string`

@@ -1,0 +1,35 @@
+---
+title: useQuestPublishStatus
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useQuestPublishStatus
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useQuestPublishStatus](/docs/developers/..-index) / useQuestPublishStatus
+
+# Function: useQuestPublishStatus()
+
+> **useQuestPublishStatus**(`questId`): [`QuestPublishStatus`](/docs/developers/..-interfaces-QuestPublishStatus) & `object`
+
+Defined in: [hooks/useQuestPublishStatus.ts:18](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useQuestPublishStatus.ts#L18)
+
+Hook to check if a quest has been published
+Returns publishing status by checking both local and synced quest tables
+
+A quest is considered "published" if it exists in the synced table (not just local-only)
+
+## Parameters
+
+### questId
+
+`string` | `null` | `undefined`
+
+## Returns
+
+[`QuestPublishStatus`](/docs/developers/..-interfaces-QuestPublishStatus) & `object`

@@ -1,0 +1,120 @@
+---
+title: AudioSegmentService
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# AudioSegmentService
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [database\_services/audioSegmentService](/docs/developers/..-index) / AudioSegmentService
+
+# Class: AudioSegmentService
+
+Defined in: [database\_services/audioSegmentService.ts:18](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/audioSegmentService.ts#L18)
+
+## Constructors
+
+### Constructor
+
+> **new AudioSegmentService**(): `AudioSegmentService`
+
+#### Returns
+
+`AudioSegmentService`
+
+## Methods
+
+### saveAudioSegment()
+
+> **saveAudioSegment**(`segment`, `questId`, `sourceLanguageId`, `creatorId`, `projectId`): `Promise`\<\{ `assetId`: `string`; `audioUri`: `string`; \}\>
+
+Defined in: [database\_services/audioSegmentService.ts:22](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/audioSegmentService.ts#L22)
+
+Save audio segment to device storage and create asset record
+
+#### Parameters
+
+##### segment
+
+[`AudioSegmentData`](/docs/developers/..-interfaces-AudioSegmentData)
+
+##### questId
+
+`string`
+
+##### sourceLanguageId
+
+`string`
+
+##### creatorId
+
+`string`
+
+##### projectId
+
+`string`
+
+#### Returns
+
+`Promise`\<\{ `assetId`: `string`; `audioUri`: `string`; \}\>
+
+***
+
+### saveAudioSegments()
+
+> **saveAudioSegments**(`segments`, `questId`, `sourceLanguageId`, `creatorId`, `projectId`): `Promise`\<\{ `assetIds`: `string`[]; `audioUris`: `string`[]; \}\>
+
+Defined in: [database\_services/audioSegmentService.ts:96](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/audioSegmentService.ts#L96)
+
+Save multiple audio segments as a batch
+
+#### Parameters
+
+##### segments
+
+[`AudioSegmentData`](/docs/developers/..-interfaces-AudioSegmentData)[]
+
+##### questId
+
+`string`
+
+##### sourceLanguageId
+
+`string`
+
+##### creatorId
+
+`string`
+
+##### projectId
+
+`string`
+
+#### Returns
+
+`Promise`\<\{ `assetIds`: `string`[]; `audioUris`: `string`[]; \}\>
+
+***
+
+### deleteAudioSegment()
+
+> **deleteAudioSegment**(`assetId`): `Promise`\<`void`\>
+
+Defined in: [database\_services/audioSegmentService.ts:140](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/audioSegmentService.ts#L140)
+
+Delete audio segment and associated files
+
+#### Parameters
+
+##### assetId
+
+`string`
+
+#### Returns
+
+`Promise`\<`void`\>

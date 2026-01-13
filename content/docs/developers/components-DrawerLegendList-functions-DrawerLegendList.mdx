@@ -1,0 +1,59 @@
+---
+title: DrawerLegendList
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# DrawerLegendList
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [components/DrawerLegendList](/docs/developers/..-index) / DrawerLegendList
+
+# Function: DrawerLegendList()
+
+> **DrawerLegendList**\<`T`\>(`__namedParameters`): `Element`
+
+Defined in: [components/DrawerLegendList.tsx:49](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/components/DrawerLegendList.tsx#L49)
+
+DrawerLegendList - A LegendList component optimized for use inside Drawer/BottomSheet
+
+This component integrates LegendList with @gorhom/bottom-sheet using
+useBottomSheetScrollableCreator to ensure proper scroll behavior and gesture handling.
+
+## Type Parameters
+
+### T
+
+`T`
+
+## Parameters
+
+### \_\_namedParameters
+
+[`DrawerLegendListProps`](/docs/developers/..-interfaces-DrawerLegendListProps)\<`T`\>
+
+## Returns
+
+`Element`
+
+## Example
+
+```tsx
+import { Drawer, DrawerContent } from '@/components/ui/drawer';
+import { DrawerLegendList } from '@/components/DrawerLegendList';
+
+<Drawer>
+  <DrawerContent>
+    <DrawerLegendList
+      data = `{ data }`
+      renderItem = `{ renderItem }`
+      keyExtractor = `{ (item) => item.id }`
+      estimatedItemSize = `{ 200 }`
+    />
+  </DrawerContent>
+</Drawer>
+```

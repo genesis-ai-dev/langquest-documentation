@@ -1,0 +1,40 @@
+---
+title: publishBibleChapter
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# publishBibleChapter
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [database\_services/publishService](/docs/developers/..-index) / publishBibleChapter
+
+# Function: publishBibleChapter()
+
+> **publishBibleChapter**(`params`): `Promise`\<[`PublishChapterResult`](/docs/developers/..-interfaces-PublishChapterResult)\>
+
+Defined in: [database\_services/publishService.ts:1413](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/publishService.ts#L1413)
+
+Publish a Bible chapter to the cloud
+
+SAFETY GUARANTEE: Local records are preserved until cloud sync is confirmed.
+This function returns immediately after queueing the publish operation.
+PowerSync handles the actual upload in the background.
+
+## Parameters
+
+### params
+
+[`PublishChapterParams`](/docs/developers/..-interfaces-PublishChapterParams)
+
+Chapter ID and user ID
+
+## Returns
+
+`Promise`\<[`PublishChapterResult`](/docs/developers/..-interfaces-PublishChapterResult)\>
+
+Result indicating publish was queued successfully

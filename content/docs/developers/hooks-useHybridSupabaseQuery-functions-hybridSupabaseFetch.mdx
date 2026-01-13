@@ -1,0 +1,61 @@
+---
+title: hybridSupabaseFetch
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# hybridSupabaseFetch
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useHybridSupabaseQuery](/docs/developers/..-index) / hybridSupabaseFetch
+
+# Function: hybridSupabaseFetch()
+
+> **hybridSupabaseFetch**\<`T`\>(`config`): `Promise`\<`T`[]\>
+
+Defined in: [hooks/useHybridSupabaseQuery.ts:541](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useHybridSupabaseQuery.ts#L541)
+
+hybridSupabaseFetch
+
+A standalone function that always fetches local data first, then cloud data when available,
+and merges with local priority. Can be used outside of React components.
+
+## Type Parameters
+
+### T
+
+`T` *extends* `Record`\<`string`, `unknown`\> \| `undefined`
+
+## Parameters
+
+### config
+
+`HybridSupabaseFetchConfig`\<`T`\>
+
+## Returns
+
+`Promise`\<`T`[]\>
+
+## Example
+
+```ts
+// Using unified query
+const projects = await hybridSupabaseFetch({
+  query: db.select().from(projectTable).where(eq(projectTable.visible, true)),
+  queryKey: ['projects']
+});
+
+// Using separate functions
+const projects = await hybridSupabaseFetch({
+  onlineFn: async () => {
+    const response = await supabase.from('project').select('*').eq('visible', true);
+    return response.data || [];
+  },
+  offlineQuery: db.select().from(projectTable).where(eq(projectTable.visible, true)),
+  queryKey: ['projects']
+});
+```

@@ -1,0 +1,104 @@
+---
+title: TranslationService
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# TranslationService
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [database\_services/translationService](/docs/developers/..-index) / TranslationService
+
+# Class: TranslationService
+
+Defined in: [database\_services/translationService.ts:10](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/translationService.ts#L10)
+
+## Constructors
+
+### Constructor
+
+> **new TranslationService**(): `TranslationService`
+
+#### Returns
+
+`TranslationService`
+
+## Methods
+
+### getTranslationsByAssetId()
+
+> **getTranslationsByAssetId**(`asset_id`, `current_user_id?`): `Promise`\<`any`\>
+
+Defined in: [database\_services/translationService.ts:11](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/translationService.ts#L11)
+
+#### Parameters
+
+##### asset\_id
+
+`string`
+
+##### current\_user\_id?
+
+`string`
+
+#### Returns
+
+`Promise`\<`any`\>
+
+***
+
+### getTranslationById()
+
+> **getTranslationById**(`translation_id`, `current_user_id?`): `Promise`\<`any`\>
+
+Defined in: [database\_services/translationService.ts:44](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/translationService.ts#L44)
+
+#### Parameters
+
+##### translation\_id
+
+`string`
+
+##### current\_user\_id?
+
+`string`
+
+#### Returns
+
+`Promise`\<`any`\>
+
+***
+
+### createTranslation()
+
+> **createTranslation**(`data`): `Promise`\<`any`\>
+
+Defined in: [database\_services/translationService.ts:73](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/translationService.ts#L73)
+
+#### Parameters
+
+##### data
+
+###### text
+
+`string` \| `null`
+
+###### source_language_id
+
+`string`
+
+###### asset_id
+
+`string`
+
+###### audio
+
+`string`[] \| `null`
+
+#### Returns
+
+`Promise`\<`any`\>

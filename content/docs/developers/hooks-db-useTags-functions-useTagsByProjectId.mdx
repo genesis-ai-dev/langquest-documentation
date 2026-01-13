@@ -1,0 +1,119 @@
+---
+title: useTagsByProjectId
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useTagsByProjectId
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-..-modules) / [hooks/db/useTags](/docs/developers/..-index) / useTagsByProjectId
+
+# Function: useTagsByProjectId()
+
+> **useTagsByProjectId**(`project_id`): `object`
+
+Defined in: [hooks/db/useTags.ts:94](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/db/useTags.ts#L94)
+
+Returns `{ tags, isLoading, error  }`
+Fetches tags by project ID from Supabase (online) or local Drizzle DB (offline)
+Gets all unique tags that belong to quests within the specified project
+OPTIMIZED VERSION - uses direct joins instead of chunked requests
+
+## Parameters
+
+### project\_id
+
+`string`
+
+## Returns
+
+`object`
+
+### tags
+
+> **tags**: `any`
+
+### isTagsLoading
+
+> **isTagsLoading**: `any`
+
+### error
+
+> **error**: `any`
+
+### isError
+
+> **isError**: `any`
+
+### isFetching
+
+> **isFetching**: `any`
+
+### isSuccess
+
+> **isSuccess**: `any` = `localQuery.isSuccess`
+
+### refetch()
+
+> **refetch**: () => `void`
+
+#### Returns
+
+`void`
+
+### dataUpdatedAt
+
+> **dataUpdatedAt**: `number`
+
+### errorUpdatedAt
+
+> **errorUpdatedAt**: `number`
+
+### failureCount
+
+> **failureCount**: `any`
+
+### failureReason
+
+> **failureReason**: `any`
+
+### fetchStatus
+
+> **fetchStatus**: `any` = `localQuery.fetchStatus`
+
+### isInitialLoading
+
+> **isInitialLoading**: `any`
+
+### isLoadingError
+
+> **isLoadingError**: `any`
+
+### isPaused
+
+> **isPaused**: `any`
+
+### isPlaceholderData
+
+> **isPlaceholderData**: `any`
+
+### isRefetchError
+
+> **isRefetchError**: `any`
+
+### isRefetching
+
+> **isRefetching**: `any`
+
+### isStale
+
+> **isStale**: `any`
+
+### status
+
+> **status**: `string`

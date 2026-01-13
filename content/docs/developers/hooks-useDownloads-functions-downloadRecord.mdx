@@ -1,0 +1,50 @@
+---
+title: downloadRecord
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# downloadRecord
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useDownloads](/docs/developers/..-index) / downloadRecord
+
+# Function: downloadRecord()
+
+> **downloadRecord**(`recordTable`, `recordId`, `downloaded?`, `downloadTreeStructure?`, `currentUser?`): `Promise`\<`void`\>
+
+Defined in: [hooks/useDownloads.ts:136](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useDownloads.ts#L136)
+
+Downloads a record and its related data.
+- For quests: uses the efficient quest_closure system that marks all related records in one operation
+- For other records: uses the legacy tree-based download system
+
+## Parameters
+
+### recordTable
+
+`string` | `number` | `symbol`
+
+### recordId
+
+`string`
+
+### downloaded?
+
+`boolean`
+
+### downloadTreeStructure?
+
+`TreeNode` | `null`
+
+### currentUser?
+
+\{ `id`: `string`; \} | `null`
+
+## Returns
+
+`Promise`\<`void`\>

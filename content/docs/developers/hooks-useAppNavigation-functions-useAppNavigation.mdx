@@ -1,0 +1,274 @@
+---
+title: useAppNavigation
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useAppNavigation
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useAppNavigation](/docs/developers/..-index) / useAppNavigation
+
+# Function: useAppNavigation()
+
+> **useAppNavigation**(): `object`
+
+Defined in: [hooks/useAppNavigation.ts:29](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useAppNavigation.ts#L29)
+
+## Returns
+
+`object`
+
+### currentView
+
+> **currentView**: `any` = `currentState.view`
+
+### currentProjectId
+
+> **currentProjectId**: `any` = `currentState.projectId`
+
+### currentQuestId
+
+> **currentQuestId**: `any` = `currentState.questId`
+
+### currentAssetId
+
+> **currentAssetId**: `any` = `currentState.assetId`
+
+### currentProjectName
+
+> **currentProjectName**: `any` = `currentState.projectName`
+
+### currentProjectTemplate
+
+> **currentProjectTemplate**: `any` = `currentState.projectTemplate`
+
+### currentBookId
+
+> **currentBookId**: `any` = `currentState.bookId`
+
+### currentQuestName
+
+> **currentQuestName**: `any` = `currentState.questName`
+
+### currentAssetName
+
+> **currentAssetName**: `any` = `currentState.assetName`
+
+### currentProjectData
+
+> **currentProjectData**: `any` = `currentState.projectData`
+
+### currentBookQuestData
+
+> **currentBookQuestData**: `any` = `currentState.bookQuestData`
+
+### currentQuestData
+
+> **currentQuestData**: `any` = `currentState.questData`
+
+### currentAssetData
+
+> **currentAssetData**: `any` = `currentState.assetData`
+
+### navigate()
+
+> **navigate**: (`newState`) => `void`
+
+#### Parameters
+
+##### newState
+
+`Partial`\<[`NavigationState`](/docs/developers/..-interfaces-NavigationState)\>
+
+#### Returns
+
+`void`
+
+### goBack()
+
+> **goBack**: () => `void`
+
+#### Returns
+
+`void`
+
+### goToRoot()
+
+> **goToRoot**: () => `void`
+
+#### Returns
+
+`void`
+
+### goToProjects()
+
+> **goToProjects**: () => `void`
+
+#### Returns
+
+`void`
+
+### goToProject()
+
+> **goToProject**: (`projectData`) => `void`
+
+#### Parameters
+
+##### projectData
+
+###### id
+
+`string`
+
+###### name?
+
+`string`
+
+###### template?
+
+`string` \| `null`
+
+###### projectData?
+
+`Record`\<`string`, `unknown`\>
+
+#### Returns
+
+`void`
+
+### goToQuest()
+
+> **goToQuest**: (`questData`) => `void`
+
+#### Parameters
+
+##### questData
+
+###### id
+
+`string`
+
+###### project_id
+
+`string`
+
+###### name?
+
+`string`
+
+###### questData?
+
+`Record`\<`string`, `unknown`\>
+
+###### projectData?
+
+`Record`\<`string`, `unknown`\>
+
+#### Returns
+
+`void`
+
+### goToAsset()
+
+> **goToAsset**: (`assetData`) => `void`
+
+#### Parameters
+
+##### assetData
+
+###### id
+
+`string`
+
+###### name?
+
+`string`
+
+###### projectId?
+
+`string`
+
+###### questId?
+
+`string`
+
+###### assetData?
+
+`Record`\<`string`, `unknown`\>
+
+###### questData?
+
+`Record`\<`string`, `unknown`\>
+
+###### projectData?
+
+`Record`\<`string`, `unknown`\>
+
+#### Returns
+
+`void`
+
+### goToProfile()
+
+> **goToProfile**: () => `void`
+
+#### Returns
+
+`void`
+
+### goToNotifications()
+
+> **goToNotifications**: () => `void`
+
+#### Returns
+
+`void`
+
+### goToSettings()
+
+> **goToSettings**: () => `void`
+
+#### Returns
+
+`void`
+
+### goToCorruptedAttachments()
+
+> **goToCorruptedAttachments**: () => `void`
+
+#### Returns
+
+`void`
+
+### goToAccountDeletion()
+
+> **goToAccountDeletion**: () => `void`
+
+#### Returns
+
+`void`
+
+### goToDownloadStatus()
+
+> **goToDownloadStatus**: () => `void`
+
+#### Returns
+
+`void`
+
+### breadcrumbs
+
+> **breadcrumbs**: `object`[]
+
+### canGoBack
+
+> **canGoBack**: `boolean`
+
+### navigationStack
+
+> **navigationStack**: `any`[] = `safeNavigationStack`

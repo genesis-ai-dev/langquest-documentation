@@ -1,0 +1,108 @@
+---
+title: VoteService
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# VoteService
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [database\_services/voteService](/docs/developers/..-index) / VoteService
+
+# Class: VoteService
+
+Defined in: [database\_services/voteService.ts:11](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/voteService.ts#L11)
+
+## Constructors
+
+### Constructor
+
+> **new VoteService**(): `VoteService`
+
+#### Returns
+
+`VoteService`
+
+## Methods
+
+### addVote()
+
+> **addVote**(`data`): `Promise`\<`void`\>
+
+Defined in: [database\_services/voteService.ts:12](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/voteService.ts#L12)
+
+#### Parameters
+
+##### data
+
+###### asset_id
+
+`string`
+
+###### creator_id
+
+`string`
+
+###### vote_id?
+
+`string`
+
+###### polarity
+
+`any`
+
+###### comment?
+
+`string`
+
+###### active?
+
+`boolean`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+***
+
+### getUserVoteForTranslation()
+
+> **getUserVoteForTranslation**(`asset_id`, `userId`): `Promise`\<`any`\>
+
+Defined in: [database\_services/voteService.ts:80](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/voteService.ts#L80)
+
+#### Parameters
+
+##### asset\_id
+
+`string`
+
+##### userId
+
+`string`
+
+#### Returns
+
+`Promise`\<`any`\>
+
+***
+
+### getVotesByAssetId()
+
+> **getVotesByAssetId**(`asset_id`): `Promise`\<`any`\>
+
+Defined in: [database\_services/voteService.ts:91](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/voteService.ts#L91)
+
+#### Parameters
+
+##### asset\_id
+
+`string`
+
+#### Returns
+
+`Promise`\<`any`\>

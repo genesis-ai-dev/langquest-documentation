@@ -1,0 +1,60 @@
+---
+title: useDeferredQuery
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useDeferredQuery
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useDeferredQuery](/docs/developers/..-index) / useDeferredQuery
+
+# Function: useDeferredQuery()
+
+> **useDeferredQuery**\<`TQueryFnData`, `TError`, `TData`, `TQueryKey`\>(`options`): `UseQueryResult`\<`TData`, `TError`\>
+
+Defined in: [hooks/useDeferredQuery.ts:25](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useDeferredQuery.ts#L25)
+
+Defers query execution until after interactions complete
+
+## Type Parameters
+
+### TQueryFnData
+
+`TQueryFnData` = `unknown`
+
+### TError
+
+`TError` = `Error`
+
+### TData
+
+`TData` = `TQueryFnData`
+
+### TQueryKey
+
+`TQueryKey` *extends* readonly `unknown`[] = readonly `unknown`[]
+
+## Parameters
+
+### options
+
+`UseQueryOptions`\<`TQueryFnData`, `TError`, `TData`, `TQueryKey`\>
+
+## Returns
+
+`UseQueryResult`\<`TData`, `TError`\>
+
+## Example
+
+```tsx
+const { data, isLoading } = useDeferredQuery({
+  queryKey: ['assets', assetId],
+  queryFn: () => fetchAsset(assetId),
+  // Query won't run until animations complete
+});
+```

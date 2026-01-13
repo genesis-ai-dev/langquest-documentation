@@ -1,0 +1,60 @@
+---
+title: useBibleChapters
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useBibleChapters
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useBibleChapters](/docs/developers/..-index) / useBibleChapters
+
+# Function: useBibleChapters()
+
+> **useBibleChapters**(`projectId`, `bookId`): `object`
+
+Defined in: [hooks/useBibleChapters.ts:366](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useBibleChapters.ts#L366)
+
+Hook to query existing chapter quests for a Bible book
+Uses metadata.bible.book and metadata.bible.chapter for identification
+Returns chapters with source tracking for both local and synced versions
+LOCAL-FIRST: Shows local data immediately, fetches cloud data in parallel (background)
+UI never blocks on cloud - only on local query
+
+## Parameters
+
+### projectId
+
+`string`
+
+### bookId
+
+`string`
+
+## Returns
+
+`object`
+
+### chapters
+
+> **chapters**: [`BibleChapter`](/docs/developers/..-interfaces-BibleChapter)[]
+
+### existingChapterNumbers
+
+> **existingChapterNumbers**: `number`[]
+
+### isLoading
+
+> **isLoading**: `any` = `isLoadingLocal`
+
+### isLoadingCloud
+
+> **isLoadingCloud**: `any`
+
+### error
+
+> **error**: `any` = `localError`

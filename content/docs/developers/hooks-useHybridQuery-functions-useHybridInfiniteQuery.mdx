@@ -1,0 +1,83 @@
+---
+title: useHybridInfiniteQuery
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useHybridInfiniteQuery
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useHybridQuery](/docs/developers/..-index) / useHybridInfiniteQuery
+
+# Function: useHybridInfiniteQuery()
+
+> **useHybridInfiniteQuery**\<`T`, `TPageParam`\>(`options`): `any`
+
+Defined in: [hooks/useHybridQuery.ts:629](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useHybridQuery.ts#L629)
+
+useHybridInfiniteQuery
+
+A hook that provides infinite scrolling with automatic online/offline switching.
+Follows TKDodo's best practices for infinite queries with proper TypeScript support.
+
+## Type Parameters
+
+### T
+
+`T` *extends* `Record`\<`string`, `unknown`\>
+
+### TPageParam
+
+`TPageParam` = `unknown`
+
+## Parameters
+
+### options
+
+`HybridInfiniteQueryOptions`\<`T`, `TPageParam`\>
+
+## Returns
+
+`any`
+
+## Example
+
+```ts
+const {
+  data,
+  fetchNextPage,
+  hasNextPage,
+  isFetching,
+  isFetchingNextPage
+} = useHybridInfiniteQuery({
+  queryKey: ['assets', 'paginated', questId],
+  onlineFn: async ({ pageParam = 0 }: { pageParam: number }) => {
+    const response = await supabaseClient
+      .from('assets')
+      .select('*')
+      .range(pageParam * 20, (pageParam + 1) * 20 - 1);
+    return {
+      data: response.data || [],
+      nextCursor: response.data?.length === 20 ? pageParam + 1 : undefined,
+      hasMore: response.data?.length === 20
+    };
+  },
+  offlineFn: async ({ pageParam = 0 }: { pageParam: number }) => {
+    const assets = await db.query.asset.findMany({
+      limit: 20,
+      offset: pageParam * 20
+    });
+    return {
+      data: assets,
+      nextCursor: assets.length === 20 ? pageParam + 1 : undefined,
+      hasMore: assets.length === 20
+    };
+  },
+  initialPageParam: 0,
+  getNextPageParam: (lastPage) => lastPage.nextCursor
+});
+```

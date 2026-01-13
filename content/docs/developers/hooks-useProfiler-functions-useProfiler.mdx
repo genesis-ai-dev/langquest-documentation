@@ -1,0 +1,80 @@
+---
+title: useProfiler
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useProfiler
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useProfiler](/docs/developers/..-index) / useProfiler
+
+# Function: useProfiler()
+
+> **useProfiler**(`__namedParameters`): `object`
+
+Defined in: [hooks/useProfiler.ts:14](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/hooks/useProfiler.ts#L14)
+
+Hook to easily integrate performance profiling into React components
+
+## Parameters
+
+### \_\_namedParameters
+
+`UseProfilerOptions`
+
+## Returns
+
+`object`
+
+### trackEffect()
+
+> **trackEffect**: (`effectId`, `dependencies?`) => () => `void` = `trackEffectExecution`
+
+#### Parameters
+
+##### effectId
+
+`string`
+
+##### dependencies?
+
+`unknown`[]
+
+#### Returns
+
+> (): `void`
+
+##### Returns
+
+`void`
+
+### trackState()
+
+> **trackState**: (`stateName`, `oldValue?`, `newValue?`) => `void`
+
+#### Parameters
+
+##### stateName
+
+`string`
+
+##### oldValue?
+
+`unknown`
+
+##### newValue?
+
+`unknown`
+
+#### Returns
+
+`void`
+
+### renderCount
+
+> **renderCount**: `number` = `renderCountRef.current`

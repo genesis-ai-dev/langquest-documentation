@@ -1,0 +1,50 @@
+---
+title: updateAssetContentText
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# updateAssetContentText
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.9**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [database\_services/assetService](/docs/developers/..-index) / updateAssetContentText
+
+# Function: updateAssetContentText()
+
+> **updateAssetContentText**(`assetId`, `newText`, `contentId?`): `Promise`\<`void`\>
+
+Defined in: [database\_services/assetService.ts:71](https://github.com/genesis-ai-dev/langquest/blob/f7ed1c72e1fe261d718ebb5662444ca88a2ad3d9/database_services/assetService.ts#L71)
+
+Update asset content text - ONLY for local-only assets
+
+## Parameters
+
+### assetId
+
+`string`
+
+The ID of the asset whose content to update
+
+### newText
+
+`string`
+
+The new text content
+
+### contentId?
+
+`string`
+
+The ID of the specific content link record to update (optional - updates first content if not provided)
+
+## Returns
+
+`Promise`\<`void`\>
+
+## Throws
+
+Error if asset content is synced (immutable)
