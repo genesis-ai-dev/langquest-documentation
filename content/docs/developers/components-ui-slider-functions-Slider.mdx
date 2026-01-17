@@ -17,13 +17,17 @@ sidebar_position: 100
 
 > **Slider**(`__namedParameters`): `Element`
 
-Defined in: [components/ui/slider.tsx:13](https://github.com/genesis-ai-dev/langquest/blob/7579a1131235f181d8b2bfbe921b145ca5e2b76f/components/ui/slider.tsx#L13)
+Defined in: [components/ui/slider.tsx:42](https://github.com/genesis-ai-dev/langquest/blob/bcf9613481583b05699aeca2003ff5ce69686880/components/ui/slider.tsx#L42)
+
+Custom Slider component with gesture handling
+Does NOT use @rn-primitives/slider to avoid precision errors in native code
+All rendering and gesture handling is done in JS/React Native
 
 ## Parameters
 
 ### \_\_namedParameters
 
-`any`
+`SliderProps`
 
 ## Returns
 
