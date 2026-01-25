@@ -1,0 +1,34 @@
+---
+title: batchUpdateAssetMetadata
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# batchUpdateAssetMetadata
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.10**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [database\_services/assetService](/docs/developers/..-index) / batchUpdateAssetMetadata
+
+# Function: batchUpdateAssetMetadata()
+
+> **batchUpdateAssetMetadata**(`updates`): `Promise`\<`void`\>
+
+Defined in: [database\_services/assetService.ts:213](https://github.com/genesis-ai-dev/langquest/blob/0ad4fae4cdf57c04fd8ccdbaf8ce236b52fc089b/database_services/assetService.ts#L213)
+
+Batch update asset metadata and/or order_index for multiple assets
+
+## Parameters
+
+### updates
+
+[`AssetUpdatePayload`](/docs/developers/..-interfaces-AssetUpdatePayload)[]
+
+Array of { assetId, metadata?, order_index? } objects
+
+## Returns
+
+`Promise`\<`void`\>

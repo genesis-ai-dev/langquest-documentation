@@ -15,7 +15,7 @@ sidebar_position: 100
 
 # Class: TagService
 
-Defined in: [database\_services/tagService.ts:9](https://github.com/genesis-ai-dev/langquest/blob/24a2c8ab531a2987bcbc9457f5710e13fabd4129/database_services/tagService.ts#L9)
+Defined in: [database\_services/tagService.ts:11](https://github.com/genesis-ai-dev/langquest/blob/0ad4fae4cdf57c04fd8ccdbaf8ce236b52fc089b/database_services/tagService.ts#L11)
 
 ## Constructors
 
@@ -33,7 +33,7 @@ Defined in: [database\_services/tagService.ts:9](https://github.com/genesis-ai-d
 
 > **getTagsByQuestId**(`quest_id`): `Promise`\<`any`\>
 
-Defined in: [database\_services/tagService.ts:10](https://github.com/genesis-ai-dev/langquest/blob/24a2c8ab531a2987bcbc9457f5710e13fabd4129/database_services/tagService.ts#L10)
+Defined in: [database\_services/tagService.ts:12](https://github.com/genesis-ai-dev/langquest/blob/0ad4fae4cdf57c04fd8ccdbaf8ce236b52fc089b/database_services/tagService.ts#L12)
 
 #### Parameters
 
@@ -51,13 +51,94 @@ Defined in: [database\_services/tagService.ts:10](https://github.com/genesis-ai-
 
 > **getTagsByAssetId**(`asset_id`): `Promise`\<`any`\>
 
-Defined in: [database\_services/tagService.ts:31](https://github.com/genesis-ai-dev/langquest/blob/24a2c8ab531a2987bcbc9457f5710e13fabd4129/database_services/tagService.ts#L31)
+Defined in: [database\_services/tagService.ts:33](https://github.com/genesis-ai-dev/langquest/blob/0ad4fae4cdf57c04fd8ccdbaf8ce236b52fc089b/database_services/tagService.ts#L33)
 
 #### Parameters
 
 ##### asset\_id
 
 `string`
+
+#### Returns
+
+`Promise`\<`any`\>
+
+***
+
+### searchTags()
+
+> **searchTags**(`searchTerm?`, `limit?`): `Promise`\<`any`\>
+
+Defined in: [database\_services/tagService.ts:66](https://github.com/genesis-ai-dev/langquest/blob/0ad4fae4cdf57c04fd8ccdbaf8ce236b52fc089b/database_services/tagService.ts#L66)
+
+#### Parameters
+
+##### searchTerm?
+
+`string`
+
+##### limit?
+
+`number` = `200`
+
+#### Returns
+
+`Promise`\<`any`\>
+
+***
+
+### getAllActiveTags()
+
+> **getAllActiveTags**(`limit`): `Promise`\<`any`\>
+
+Defined in: [database\_services/tagService.ts:80](https://github.com/genesis-ai-dev/langquest/blob/0ad4fae4cdf57c04fd8ccdbaf8ce236b52fc089b/database_services/tagService.ts#L80)
+
+#### Parameters
+
+##### limit
+
+`number` = `200`
+
+#### Returns
+
+`Promise`\<`any`\>
+
+***
+
+### preloadTagsIntoCache()
+
+> **preloadTagsIntoCache**(): `Promise`\<`void`\>
+
+Defined in: [database\_services/tagService.ts:91](https://github.com/genesis-ai-dev/langquest/blob/0ad4fae4cdf57c04fd8ccdbaf8ce236b52fc089b/database_services/tagService.ts#L91)
+
+#### Returns
+
+`Promise`\<`void`\>
+
+***
+
+### assignTagsToAssetLocal()
+
+> **assignTagsToAssetLocal**(`asset_id`, `tag_ids`): `Promise`\<`any`\>
+
+Defined in: [database\_services/tagService.ts:110](https://github.com/genesis-ai-dev/langquest/blob/0ad4fae4cdf57c04fd8ccdbaf8ce236b52fc089b/database_services/tagService.ts#L110)
+
+Assigns a list of tags to an asset.
+Deletes all existing tag assignments for the asset and creates new ones.
+
+#### Parameters
+
+##### asset\_id
+
+`string`
+
+The ID of the asset
+
+##### tag\_ids
+
+`string`[]
+
+Array of tag IDs to assign to the asset
 
 #### Returns
 

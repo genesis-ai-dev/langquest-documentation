@@ -1,0 +1,44 @@
+---
+title: updateAssetMetadata
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# updateAssetMetadata
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.10**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [database\_services/assetService](/docs/developers/..-index) / updateAssetMetadata
+
+# Function: updateAssetMetadata()
+
+> **updateAssetMetadata**(`assetId`, `metadata`): `Promise`\<`void`\>
+
+Defined in: [database\_services/assetService.ts:152](https://github.com/genesis-ai-dev/langquest/blob/0ad4fae4cdf57c04fd8ccdbaf8ce236b52fc089b/database_services/assetService.ts#L152)
+
+Update asset metadata (verse range) - ONLY for local-only assets
+
+## Parameters
+
+### assetId
+
+`string`
+
+The ID of the asset to update
+
+### metadata
+
+The metadata object to store (will be JSON stringified)
+
+[`AssetMetadata`](/docs/developers/..-interfaces-AssetMetadata) | `null`
+
+## Returns
+
+`Promise`\<`void`\>
+
+## Throws
+
+Error if asset is synced (immutable)
