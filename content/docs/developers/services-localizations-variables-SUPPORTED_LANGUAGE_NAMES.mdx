@@ -1,0 +1,25 @@
+---
+title: SUPPORTED LANGUAGE NAMES
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# SUPPORTED LANGUAGE NAMES
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.10**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [services/localizations](/docs/developers/..-index) / SUPPORTED\_LANGUAGE\_NAMES
+
+# Variable: SUPPORTED\_LANGUAGE\_NAMES
+
+> `const` **SUPPORTED\_LANGUAGE\_NAMES**: `Set`\<`string`\>
+
+Defined in: [services/localizations.ts:16](https://github.com/genesis-ai-dev/langquest/blob/7b5bd2a536b6b422f664dee469db2b301d95de39/services/localizations.ts#L16)
+
+Languoid names that have local UI support.
+Used to filter ui_ready languoids from the DB to prevent showing
+languages that newer DB versions support but older app versions don't.
+Must match the mapping in useLocalization.ts mapLanguoidNameToSupportedLanguage()

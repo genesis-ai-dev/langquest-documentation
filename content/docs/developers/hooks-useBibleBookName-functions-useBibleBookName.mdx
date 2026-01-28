@@ -1,0 +1,48 @@
+---
+title: useBibleBookName
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useBibleBookName
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.10**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useBibleBookName](/docs/developers/..-index) / useBibleBookName
+
+# Function: useBibleBookName()
+
+> **useBibleBookName**(`bookId`): `any`
+
+Defined in: [hooks/useBibleBookName.ts:19](https://github.com/genesis-ai-dev/langquest/blob/7b5bd2a536b6b422f664dee469db2b301d95de39/hooks/useBibleBookName.ts#L19)
+
+Hook to get localized Bible book name and abbreviation.
+Automatically uses the current UI language.
+
+For English, returns the uppercase book ID (e.g., "GEN", "EXO") to match
+the original display behavior. For other languages, returns localized abbreviations.
+
+## Parameters
+
+### bookId
+
+`string`
+
+The book ID (e.g., 'gen', 'exo', 'mat')
+
+## Returns
+
+`any`
+
+Object with localized name and abbreviation
+
+## Example
+
+```ts
+const { name, abbrev } = useBibleBookName('gen');
+// In English: { name: 'Genesis', abbrev: 'GEN' }
+// In Nepali: { name: 'उत्पत्ति', abbrev: 'उत्प' }
+```

@@ -1,0 +1,47 @@
+---
+title: useBibleBookNameGetter
+description: API documentation generated from code docstrings
+sidebar_position: 100
+---
+# useBibleBookNameGetter
+
+> **Note**: This documentation is automatically generated from code docstrings in the main LangQuest repository.
+
+[**langquest v2.0.10**](/docs/developers/..-..-..-index)
+
+***
+
+[langquest](/docs/developers/..-..-..-modules) / [hooks/useBibleBookName](/docs/developers/..-index) / useBibleBookNameGetter
+
+# Function: useBibleBookNameGetter()
+
+> **useBibleBookNameGetter**(): (`bookId`) => `any`
+
+Defined in: [hooks/useBibleBookName.ts:42](https://github.com/genesis-ai-dev/langquest/blob/7b5bd2a536b6b422f664dee469db2b301d95de39/hooks/useBibleBookName.ts#L42)
+
+Hook to get a function that returns localized book names.
+Useful when you need to localize multiple books without multiple hook calls.
+
+## Returns
+
+Function that takes a bookId and returns localized name/abbreviation
+
+> (`bookId`): `any`
+
+### Parameters
+
+#### bookId
+
+`string`
+
+### Returns
+
+`any`
+
+## Example
+
+```ts
+const getBookName = useBibleBookNameGetter();
+const genesis = getBookName('gen');
+const exodus = getBookName('exo');
+```
