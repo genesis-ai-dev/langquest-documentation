@@ -2,6 +2,106 @@
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
 
+/* Purple-tinted theme for LangQuest */
+:root {
+  /* Primary accent - Violet */
+  --fd-primary: 262 52% 54%;
+  --fd-primary-foreground: 0 0% 100%;
+
+  /* Background - soft white with the faintest purple blush */
+  --fd-background: 270 20% 97%;
+
+  /* Surface - sidebar/card with a very light purple tint */
+  --fd-card: 265 18% 95%;
+  --fd-muted: 265 18% 95%;
+
+  /* Text colors */
+  --fd-foreground: 258 23% 20%; /* Deep purple-charcoal */
+  --fd-muted-foreground: 258 14% 50%; /* Muted lavender-stone */
+
+  /* Borders */
+  --fd-border: 265 15% 87%;
+
+  /* Hover state - Deep Violet */
+  --fd-accent: 265 50% 38%;
+  --fd-accent-foreground: 0 0% 100%;
+
+  /* Semantic colors */
+  --fd-destructive: 0 76% 57%;
+  --fd-warning: 40 67% 51%;
+
+  --fd-radius: 0.625rem;
+}
+
+.dark {
+  --fd-primary: 265 55% 65%;
+  --fd-background: 258 25% 11%;
+  --fd-card: 258 22% 15%;
+  --fd-muted: 258 22% 15%;
+  --fd-foreground: 265 12% 90%;
+  --fd-muted-foreground: 265 10% 60%;
+  --fd-border: 258 18% 22%;
+  --fd-accent: 265 50% 48%;
+  --fd-destructive: 0 76% 62%;
+  --fd-warning: 40 67% 58%;
+}
+
+/* Smooth page transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Subtle shadow refinements for cards */
+.fd-card {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.fd-card:hover {
+  transform: translateY(-1px);
+}
+
+/* Subtle code block polish */
+pre {
+  border: 1px solid hsl(var(--fd-border) / 0.5);
+}
+
+/* Inline code with subtle purple tint */
+:not(pre) > code {
+  background: hsl(265 18% 93%);
+  border: 1px solid hsl(265 15% 87%);
+  color: hsl(258 23% 20%);
+}
+
+.dark :not(pre) > code {
+  background: hsl(258 22% 18%);
+  border: 1px solid hsl(258 18% 25%);
+  color: hsl(265 12% 90%);
+}
+
+/* Active sidebar item - violet accent */
+[data-active="true"] {
+  border-left: 2px solid hsl(var(--fd-primary)) !important;
+  background: hsl(var(--fd-primary) / 0.08) !important;
+}
+
+/* Links with violet color */
+.prose a:not([class]) {
+  color: hsl(var(--fd-primary));
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+
+.prose a:not([class]):hover {
+  color: hsl(var(--fd-accent));
+}
+
+/* Refined focus states */
+:focus-visible {
+  outline: 2px solid hsl(var(--fd-primary));
+  outline-offset: 2px;
+}
+
 /* Vertical Video Styles for 9:16 Loom videos */
 .vertical-video-container {
   max-width: 400px;
@@ -25,6 +125,6 @@
   width: 100%;
   height: 100%;
   border: none;
-  transform: scale(1.0); /* Scale to crop Loom's black bars */
+  transform: scale(1.0);
   transform-origin: center;
 }

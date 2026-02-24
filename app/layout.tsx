@@ -45,7 +45,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           data-website-id="f81c841d-30e7-40d0-a9b6-0752d6f8f8c0"
         />
       </head>
-      <body className="flex flex-col min-h-screen">
+      <body className="flex flex-col min-h-screen antialiased">
         <RootProvider>{children}</RootProvider>
       </body>
     </html>
