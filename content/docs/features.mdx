@@ -14,59 +14,59 @@ LangQuest provides a comprehensive suite of features designed specifically for c
 **Projects** serve as the organizational backbone of LangQuest, allowing communities to structure their translation efforts around specific books, chapters, or thematic content.
 
 - **Project Management**: Create and manage translation projects with customizable settings
-- **Member Management**: Control who can participate in translation efforts
+- **Member Management**: Control who can participate in translation efforts through invites and requests
 - **Content Organization**: Structure resources hierarchically for efficient workflow
-- **Progress Tracking**: Monitor translation completion and quality metrics
+- **Progress Tracking**: Monitor translation completion based on contributions and approvals
+- **Public and Private Projects**: Projects can be open to all users or restricted to invited members
 
-**Quests** break down projects into manageable translation tasks, making the work more accessible and gamified.
+**Quests** break down projects into manageable translation tasks, making the work more accessible.
 
 - **Task Assignment**: Individual translation challenges within larger projects
-- **Difficulty Levels**: Varied complexity to accommodate different skill levels
-- **Achievement System**: Rewards for completing translation milestones
+- **Quest Download**: Download quests for fully offline use, then sync when back online
+- **Quest Export**: Export completed quest translations for distribution or review
 
 ### Multimedia Asset Support
 
-LangQuest recognizes that effective Bible translation requires rich contextual information beyond just text.
+LangQuest recognizes that effective translation requires rich contextual information beyond just text.
 
 #### Text Assets
-- Source text passages in original languages
+- Source text passages
 - Reference translations for comparison
-- Commentary and cultural context notes
-- Linguistic annotations and grammatical notes
+- Verse and passage markers for Scripture content
 
 #### Audio Assets
 - Original language audio for pronunciation guidance
-- Multiple dialect variations where available
-- Audio quality standards for consistent playback
-- Recording capabilities for target language audio
+- Voice recording for target language audio translations
+- Audio playback and waveform visualization
 
 #### Image Assets
-- Cultural and historical context imagery
-- Maps and geographical references
-- Illustrations for complex concepts
-- Visual aids for abstract concepts
+- Context imagery attached to assets
+- Image carousel for viewing multiple images per asset
 
 ### Translation and Voting System
 
 The heart of LangQuest's collaborative approach lies in its peer-validation system.
 
 #### Translation Submission
-- **Text Translations**: Direct text input with formatting support
+- **Text Translations**: Direct text input for written translations
 - **Audio Translations**: Voice recording with quality validation
 - **Draft Management**: Save and revise translations before submission
-- **Version Control**: Track changes and maintain translation history
 
 #### Peer Validation
-- **Community Voting**: Transparent quality assessment by peers
-- **Weighted Scoring**: Experience-based vote weighting
-- **Consensus Building**: Multiple approval thresholds for different content types
-- **Appeal Process**: Mechanism for disputed translations
+- **Community Voting**: Transparent up/down voting with optional comments on each vote
+- **Vote Indicators**: Visual gem and pickaxe icons for approved and disputed translations
+- **Private Project Control**: Project owners can restrict voting to members only
 
-#### Quality Assurance
-- **Review Cycles**: Multi-stage validation process
-- **Expert Review**: Optional professional linguist validation
-- **Consistency Checking**: Automated term consistency verification
-- **Style Guide Compliance**: Adherence to translation standards
+#### Content Moderation
+- **Reporting**: Users can flag translations or content for review
+- **Blocking**: Reported content can be hidden from your view
+- **User Blocking**: Block specific users from appearing in your feed
+
+### Notifications and Invites
+
+- **Project Invitations**: Receive and respond to invitations to join projects
+- **Join Requests**: Request to join private projects; owners approve or deny
+- **Languoid Link Suggestions**: Notifications when your custom language entry can be linked to a known language code
 
 ## Engagement and Motivation
 
@@ -85,57 +85,61 @@ See the [Roadmap](/docs/roadmap) for upcoming advanced gamification features lik
 
 ### Mobile-First Design
 
-LangQuest is designed primarily for mobile devices, recognizing that many target communities primarily access the internet through smartphones.
+LangQuest is a native mobile app (Android and iOS) designed for use in the field, including in challenging conditions with limited connectivity or hardware.
 
-- **Responsive Interface**: Optimized for various screen sizes
 - **Touch-First Navigation**: Intuitive gesture-based controls
-- **Minimal Data Usage**: Efficient content delivery for limited bandwidth
-- **Progressive Web App**: App-like experience without app store requirements
+- **Dark and Light Mode**: Switchable themes for different lighting conditions
+- **Minimal Data Usage**: Efficient content delivery for limited bandwidth environments
 
 ### Offline Functionality
 
 Critical for communities with limited or intermittent internet connectivity.
 
 #### Current Implementation
-- **Content Caching**: Predictive download of content and selective sync for offline access.
-- **Background Updates**: Automatic sync when connectivity is available.
+- **Quest Downloads**: Download specific quests and all their assets for fully offline use
+- **Local-First Storage**: All work is stored on-device first using PowerSync
+- **Background Sync**: Automatic sync when connectivity is restored
+- **Offline Alerts**: Clear indicators when certain features require a connection
 
 #### Planned Features
-See the [Roadmap](/docs/roadmap) for upcoming peer-to-peer collaboration features like local network sync and Bluetooth transfer.
+See the [Roadmap](/docs/roadmap) for upcoming peer-to-peer collaboration features like local network sync.
 
-### Multilingual Support
+### Multilingual Interface
 
-LangQuest supports a wide range of interface languages to accommodate diverse global communities.
+LangQuest supports multiple interface languages, with more in progress.
 
-- **Interface Localization**: Native language menus and instructions
-- **Right-to-Left Support**: Proper display for Arabic, Hebrew, and other RTL scripts
-- **Font Support**: Unicode compliance for all supported writing systems
-- **Input Methods**: Specialized keyboards for complex scripts
+**Currently supported UI languages:**
+- English
+- Spanish
+- Brazilian Portuguese
+- Tok Pisin
+- Indonesian
+- Nepali
 
 ## Security and Privacy
 
-### Anonymous Registration
+### Account Registration
 
-LangQuest prioritizes user privacy, especially in sensitive environments. Specific registration methods are not publicly detailed to protect user security.
+LangQuest uses email and password registration. User safety is a priority, and specific operational security guidance is available on request for sensitive deployment contexts.
 
 ### App Security Features
 
-See the [Roadmap](/docs/roadmap) for upcoming advanced security measures.
+See the [Roadmap](/docs/roadmap) for upcoming advanced security measures for sensitive environments.
 
 ### Data Protection
 
-- **End-to-End Encryption**: Secure communication between participants
-- **Distributed Storage**: No single point of failure for translation data
+- **Secure Transport**: All data is transmitted over encrypted HTTPS connections
 - **Open Source Transparency**: Auditable codebase for security verification
-- **GDPR Compliance**: European data protection standard adherence
+- **Local Data Control**: Offline-first design means your data lives on your device first
 
 ## Community Building
 
 ### Social Features
 
-- **User Profiles**: Showcase contributions and expertise
+- **User Profiles**: View your contributions and manage account settings
 - **Project Membership**: Invite team members to collaborate on projects
-- **Cloud Sync**: Upload chapters to the cloud for team collaboration
+- **Cloud Sync**: Work syncs to the cloud for team collaboration when online
+- **Content Reporting**: Flag inappropriate content to keep the community healthy
 
 ### Planned Social Features
 
@@ -143,33 +147,27 @@ See the [Roadmap](/docs/roadmap) for upcoming community features:
 
 - **Mentorship System**: Experienced translators guide newcomers
 - **Discussion Forums**: Community conversation about translation challenges
-- **Cultural Exchange**: Learn about different perspectives on translated texts
 
-### Collaboration Tools
+## Technical Features
 
-- **Real-time Collaboration**: Simultaneous editing capabilities
-- **Comment System**: Contextual discussion on specific translations
-- **Suggestion Mode**: Propose improvements to existing translations
-- **Expert Consultation**: Request help from experienced community members
+### Export and Sharing
 
-## Technical Features (Planned)
+- **Quest Export**: Export translation data for distribution or external review (available to project members)
+- **Audio Concatenation**: Combine recorded audio segments for sharing
 
-See the [Roadmap](/docs/roadmap) for details on upcoming technical features:
+### AI Features (Experimental)
+
+- **AI Translation Suggestions**: Opt-in suggestions to assist translation (experimental, enabled in settings)
+- **Auto-Transcription**: Opt-in speech-to-text for audio translations (experimental, enabled in settings)
 
 ### API and Integration (Planned)
 
+See the [Roadmap](/docs/roadmap) for details on upcoming technical features:
+
 - **REST API**: Programmatic access for external tools
 - **Webhook Support**: Real-time notifications for external systems
-- **Export Capabilities**: Download translations in standard formats
-- **Import Tools**: Bulk upload of existing translation resources
-
-### Analytics and Reporting (Planned)
-
-- **Progress Dashboards**: Visual representation of translation completion
-- **Quality Metrics**: Statistical analysis of translation accuracy
-- **Community Health**: Engagement and participation analytics
-- **Performance Optimization**: Platform usage and efficiency metrics
+- **Advanced Export Formats**: Download translations in additional standard formats
 
 ---
 
-*Interested in experiencing these features? Start with our [User Guide](/docs/user-guide) to learn the basics of using LangQuest for your translation projects.* 
+*Interested in experiencing these features? Start with our [User Guide](/docs/user-guide) to learn the basics of using LangQuest for your translation projects.*
