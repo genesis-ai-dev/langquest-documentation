@@ -3,14 +3,6 @@ title: LangQuest Basics
 description: Introduction to LangQuest - collecting text and audio language data for every language and culture
 ---
 
-# Video Walkthrough:
-
-Watch the complete walkthrough video below to learn the basics of using LangQuest.
-
-<VerticalVideo src="https://www.loom.com/embed/c7d789130eb344bf9129ff56cd30e59b?hideEmbedTopBar=true" />
-
----
-
 ## Welcome to LangQuest
 
 **Every Language. Every Culture.**
@@ -43,19 +35,6 @@ You can also create **unstructured** projects for content like:
 
 ---
 
-## How to Collect Data
-
-### Recording Mechanics
-
-To collect audio data in LangQuest, you have two options:
-
-1. **Hold the button to record** - Press and hold the record button while speaking
-2. **Slide to record anytime you talk** - Slide the button over and it will automatically record every time you speak using speech detection
-
-Each recording creates an asset that represents that specific piece of content (like a verse or story segment).
-
----
-
 ## Understanding Projects
 
 ### Your Project List
@@ -65,13 +44,20 @@ When you view your projects, you'll see your local projects that you've created.
 - **Unstructured projects** - For folktales, myths, poems, and similar content
 - **Bible content projects** - For structured Bible translation work
 
+{/* SCREENSHOT: The "My Projects" list showing different project types */}
+<Screenshot src="/images/projects-list.jpg" alt="My projects" />
+
 ### Project Types
 
 Projects are displayed with visual indicators:
 
 - **Bible icon** 📖 - Indicates a Bible translation project
 - **Crown icon** 👑 - Shows that you own this project
-- **No special icon** - Other content projects (stories, folklore, etc.)
+- **Person icon** 👤 - Shows regular membership
+- **Lock icon** 🔒 -  Shows Private/Public status
+
+{/* SCREENSHOT: Close-up of project list items showing the Bible and crown icons */}
+<Screenshot src="/images/projectIcons.jpg" alt="project icons" />
 
 ### Working with Local Projects
 
@@ -83,46 +69,108 @@ Your projects start as **local projects** stored on your device. You can work on
 
 ### Navigating Bible Content
 
+{/* SCREENSHOT: Bible book list grid showing book icons */}
+<Screenshot src="/images/project-books.jpg" alt="project books" />
+
 1. **Select a Bible project** from your project list
 2. **Browse the books of the Bible** (Genesis, Matthew, etc.)
 3. **Select a book** to view its chapters
 4. **Select a chapter** to create a quest
 
-### Verse Labels (Experimental)
+{/* SCREENSHOT: Book chapter list */}
+<Screenshot src="/images/book-chapters.jpg" alt="chapter select" />
 
-**Enable Verse Labels** is an experimental feature that helps organize Bible resources using verse labels. You can enable or disable it anytime in the settings menu.
+### Starting a Recording Session
 
-With verse labels enabled, you can:
+Once you navigate to a chapter quest you'll see an empty asset list and a **Start Recording Session** button at the bottom of your screen
+
+{/* SCREENSHOT: Empty asset list and start recording session button */}
+<Screenshot src="/images/empty-asset-list.jpg" alt="empty asset list" />
+
+When you're ready to record:
+
+1. Click **"Start Recording Session"**
+2. **Grant microphone permissions** if prompted
+3. Click **VAD recording settings** icon
+
+{/* SCREENSHOT: VAD settings button closeup */}
+<Screenshot src="/images/VAD-settings.jpg" alt="VAD settings" />
+
+4. **Calibrate your microphone** - LangQuest will automatically adjust the sensitivity for your environment
+   - ⚠️ **Important:** Remain as quiet as possible during calibration for best results
+
+{/* SCREENSHOT: Microphone calibration screen */}
+<Screenshot src="/images/VAD-calibrate.jpg" alt="VAD calibrate" />
+
+## How to Collect Data
+
+### Recording Mechanics
+
+The record button supports two modes:
+
+1. **Tap to record (VAD mode)** - A quick tap starts Voice Activity Detection, which automatically creates segments when it detects pauses in your speech. Tap again to stop.
+2. **Hold to record (Push-to-talk)** - Press and hold the record button while speaking. Release to stop. This records a single segment.
+
+{/* SCREENSHOT: The record button in its idle state, showing the tap/hold interaction area */}
+<Screenshot src="/images/VAD-HOLD.jpg" alt="buttons while recording" />
+
+Each recording creates an asset that represents that specific piece of content (like a verse or story segment). Assets from your most recent recording session are highlighted with a **"NEW" badge** so you can easily find and review them.
+
+{/* SCREENSHOT: Asset list showing the "NEW" badge on recently recorded assets */}
+<Screenshot src="/images/NEW-assets.jpg" alt="NEW assets label" />
+
+---
+
+### Verse Labels Overview
+
+**Verse Labels** are always enabled for Bible projects, helping you organize recordings by verse.
+
+With verse labels, you can:
 - **Select verse labels** before or during recording
 - **Record specific verses** by choosing the verse label first
 - **Start recording sessions** for specific verse ranges (e.g., Genesis 1:3 or Genesis 1:4)
 
-### Starting a Recording Session
-
-When you're ready to record:
-
-1. Click **"Start a recording session"**
-2. **Grant microphone permissions** if prompted
-3. **Calibrate your microphone** - LangQuest will automatically adjust the sensitivity for your environment
-   - ⚠️ **Important:** Remain as quiet as possible during calibration for best results
+{/* SCREENSHOT: Verse pills in the recording view showing selectable verse labels */}
+<Screenshot src="/images/versePill.jpg" alt="Verse pill button" />
 
 ### Recording Bible Verses
 
 In the recording view:
 
-1. **Select verse labels** from the dropdown (you can change these while recording)
-2. **Hold to record** individual verses, or **slide to record** and speak multiple verses
+{/* SCREENSHOT: verse selection */}
+<Screenshot src="/images/recordingLocation.jpg" alt="recording location" />
+
+1. **Select your verse labels for how many verses you want to record** from the verse pills
+2. **Tap to start VAD recording** and speak naturally, or **hold to record** individual verses
 3. Each recording creates an **asset** labeled with the verse number
-4. **Play back your recordings** to review them
-5. **Select and delete** any assets you don't want
+4. **During VAD you can seamlessly tap the next verse label and resume speaking**
+5. **Play back your recordings** to review them
+6. **Select and delete** any assets you don't want
+
+{/* SCREENSHOT: The full recording view with verse pills, asset cards, and the record button at the bottom */}
+<Screenshot src="/images/deleting.jpg" alt="deleting assets from recording view" />
 
 ### Managing Assets
 
 You can manage your recorded assets in several ways:
 
-- **Merge recordings** - Select multiple assets and merge them. The audio segments will be combined into the first selected asset and the others will be deleted
+- **Reorder recordings** - Drag and drop assets to rearrange their order in Bible views
+
+{/* SCREENSHOT: Asset management — drag-and-drop reordering or selection mode with action buttons */}
+<Screenshot src="/images/reOrdering.jpg" alt="drag and drop" />
+
 - **Delete recordings** - Select and delete individual assets
-- **Change verse labels** - Adjust the verse range for any asset
+- **Change/Add verse labels** - Adjust the verse range for any asset
+
+{/* SCREENSHOT: Asset management — add verse labels */}
+<Screenshot src="/images/addVerseLabel.jpg" alt="add verse labels" />
+
+- **Play all assets end-to-end** - Select to play all your recorded assets one after another
+
+{/* SCREENSHOT: Asset management — play all */}
+<Screenshot src="/images/playAllAssets.jpg" alt="play all" />
+
+- **Merge recordings** (optional) - Enable merging in Settings to combine multiple assets. The audio segments will be merged into the first selected asset and the others will be deleted
 
 ---
 
@@ -130,32 +178,39 @@ You can manage your recorded assets in several ways:
 
 ### Working Together
 
-You can work together with others on your projects:
+## Publishing Your Project to the Cloud
 
-1. **Invite others to collaborate** on your projects
-2. **They'll receive a notification** when invited
-3. **Projects will appear in their list** once they accept
-4. **Work together** on collecting and validating language data
-
-For more details on collaboration, check out the [Project Membership](/docs/project-membership) video.
+Before you can collaborate with others, you need to upload your project content to the cloud.
 
 ### Uploading to the Cloud
 
 Look for the **Cloud icon** in the top right corner of a quest. When you tap it:
 
+{/* SCREENSHOT: The cloud upload icon in the top-right corner of a quest view */}
+<Screenshot src="/images/cloudUpload.jpg" alt="Cloud upload icon" />
+
 - It will **create a permanent copy** of that chapter in the cloud
 - This is for the purposes of **collaborating with team members**
 - When you invite them to your project, **they'll be able to access this**
 - This becomes the **common point of reference** for the project
+- If the parent book or project hasn't been saved to the cloud yet, they will be saved automatically
 
 **Note:** If you're just doing tests or learning how to use the app and haven't uploaded anything to the cloud yet, your project remains local on your device.
+
+### Offline Access
+
+LangQuest is designed to work offline. Your local data is available immediately when you open the app, even without an internet connection. Syncing happens automatically in the background when connectivity returns, and you stay signed in even if your session token expires while offline.
 
 ### Deleting All Assets
 
 If you need to start over or remove test recordings:
 
-1. Go to the **menu on the bottom left**
-2. Tap the **boom icon** (delete all assets)
+1. Go to the **three-dot menu at the bottom left of the asset list**
+
+{/* SCREENSHOT: Asset menu */}
+<Screenshot src="/images/assetListMenu.jpg" alt="asset list menu" />
+
+2. Tap the **broom icon** (delete all assets)
 3. **Confirm the deletion** (this cannot be undone)
 
 ⚠️ **Warning:** Make sure you know what you're doing - this action cannot be undone!
@@ -166,15 +221,14 @@ If you need to start over or remove test recordings:
 
 Ready to start using LangQuest? Follow these steps:
 
-1. ✅ Create a project (unstructured or Bible content)
+1. ✅ Create a project (unstructured or Bible)
 2. ✅ For Bible projects: select a book, then select a chapter to create a quest
 3. ✅ Start a recording session and grant microphone permissions
 4. ✅ Calibrate your microphone (remain quiet during calibration)
-5. ✅ Enable verse labels in settings (optional, experimental feature)
-6. ✅ Select verse labels and use hold or slide to record
-7. ✅ Review, merge, or delete your recorded assets
-8. ✅ Upload to the cloud (cloud icon) when ready to collaborate
-9. ✅ Invite collaborators to work together
+5. ✅ Select verse labels and use tap (VAD) or hold (push-to-talk) to record
+6. ✅ Review, reorder, or delete your recorded assets
+7. ✅ Upload to the cloud (cloud icon) when ready to collaborate
+8. ✅ Invite collaborators to work together
 
 ---
 
@@ -182,13 +236,14 @@ Ready to start using LangQuest? Follow these steps:
 
 - **Calibrate carefully** - Remain as quiet as possible during microphone calibration for best results
 - **Start local** - Work on your device first; upload to cloud only when ready to collaborate
-- **Practice recording** - Get comfortable with hold vs. slide recording modes
-- **Use verse labels** - Enable this experimental feature to organize Bible recordings by verse
-- **Merge strategically** - Combine multiple takes into one polished recording
+- **Practice recording** - Get comfortable with tap (VAD) vs. hold (push-to-talk) recording modes
+- **Use verse labels** - Organize Bible recordings by verse using the built-in verse label system
+- **Reorder your assets** - Drag and drop to arrange recordings in the right order
+- **Work offline** - Your data is always available locally; syncing happens automatically when you reconnect
 - **Collaborate** - Invite others to share the work and improve quality
 
 ## Next Steps
 
 - **[Project Membership](/docs/project-membership)** - Learn how to invite members and manage project access
 - **[Features Overview](/docs/features)** - Explore all of LangQuest's capabilities
-- **[Roadmap](/docs/roadmap)** - See what's coming next 
+- **[Roadmap](/docs/roadmap)** - See what's coming next
