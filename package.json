@@ -13,7 +13,7 @@
     "fumadocs-mdx": "^14.2.6",
     "fumadocs-ui": "^16.4.10",
     "lucide-react": "^0.515.0",
-    "next": "^16.1.7",
+    "next": "^16.2.3",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "zod": "^4.0.0"
