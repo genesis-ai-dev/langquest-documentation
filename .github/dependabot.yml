@@ -8,6 +8,14 @@ updates:
     groups:
       minor-and-patch:
         update-types: ["minor", "patch"]
+    # fumadocs supplies the site's entire theme; 16.8+ reworked the header/nav
+    # internals and visibly broke the sibling codex-documentation site when
+    # auto-bumped (see codex-documentation#44). Upgrade the trio together,
+    # deliberately, verifying the theme in the same PR.
+    ignore:
+      - dependency-name: "fumadocs-core"
+      - dependency-name: "fumadocs-ui"
+      - dependency-name: "fumadocs-mdx"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
