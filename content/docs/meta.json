@@ -2,9 +2,18 @@
   "title": "Documentation",
   "pages": [
     "index",
+    "getting-started",
     "user-guide",
+    "unstructured-projects",
+    "translations-voting",
+    "offline-sync",
+    "export",
     "project-membership",
+    "notifications",
+    "settings-profile",
+    "data-management",
     "upload-project",
+    "troubleshooting",
     "features",
     "roadmap"
   ]
