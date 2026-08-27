@@ -217,12 +217,23 @@ When you open a pericope, LangQuest automatically downloads all FIA content (ste
 
 Multiple people can record their own version of the same Bible chapter or FIA pericope. Each version is tracked independently with the creator's name and creation date.
 
+### Version labels
+
+Every new chapter or pericope draft gets a **version label**, starting at `#1` and counting up on your device. The label appears after the quest name, separated by a dot, so the quest header, breadcrumbs, and version picker all read like **Genesis 1 · #2**.
+
+You can rename the label to something more meaningful, such as a draft stage or a reviewer's name:
+
+1. Right after you create a chapter or pericope, the **Quest Version Label** drawer opens so you can name the new version. Type a label and tap **Save**, or **Cancel** to keep the default.
+2. To rename later, open the quest and tap the **file-and-pencil icon** in the round menu at the bottom left of the asset list.
+
+Renaming works only while the version is still a draft. Once it is published, the drawer shows "Published quests cannot be renamed."
+
 ### Using the version picker
 
 When you tap a chapter or pericope that already has versions:
 
 1. A **version picker drawer** opens showing all available versions
-2. Each version displays the **creator's name**, **creation date**, and **source** (local, synced, or cloud)
+2. Each version displays the **creator's name and version label** (for example, **Rafael (you) · #2**), the **creation date**, and **source** (local, synced, or cloud)
 3. Tap a version to open it, or tap **"Create new version"** to start a fresh recording
 4. Cloud-only versions prompt you to download before opening
 
@@ -233,6 +244,35 @@ On the chapter or pericope grid, visual indicators show version state:
 - **Color coding**: Local-only versions, synced versions, and cloud-only versions each have distinct colors
 - **Version count badge**: A number appears when multiple versions exist for the same content
 - **Download indicators**: Show whether cloud versions have been downloaded for offline use
+
+---
+
+## Importing assets from an earlier version
+
+When you start a new version of a chapter or pericope, you don't have to re-record everything. The import wizard pulls recordings from an earlier **published** version of the same chapter or pericope into your new draft. Imported recordings are linked, not copied: the source version stays exactly as it was.
+
+### Before you start
+
+- Turn on **Import assets** in Settings. It is off by default.
+- Importing works on **draft** (unpublished) Bible chapter and FIA pericope quests. Chapters and pericopes created before this feature shipped do not offer it.
+- You must be signed in and a member of the project.
+- The source version must be **published**. It also needs to be downloaded to your device, but the wizard can download it for you.
+
+### Running the import wizard
+
+1. Open your draft chapter or pericope and tap the **download-arrow button** next to the Publish and Export buttons at the top of the screen. The **Import assets** wizard opens with four steps: **Instructions**, **Quest**, **Assets**, and **Validation**.
+2. **Instructions** - A short overview of the process. Tap **Next**.
+3. **Quest** - Pick the source version. The list shows every other published version of the same chapter or pericope in the project, with its name and version label, asset count, and creation date. Tapping a version that isn't on your device yet downloads it first; once the download finishes, tap it to select it.
+4. **Assets** - Check the recordings you want, or use **Select All**. Each row has a play button so you can listen to a recording before importing it. If the list is empty right after a download, the recordings may still be syncing to your device; wait a moment and tap **Refresh**.
+5. **Validation** - Review the selected recordings and their verse labels. If a verse range overlaps one already used in your draft without matching it exactly, the card turns red and the wizard shows "Resolve conflicts before proceeding." Tap the verse pill on a flagged recording to open the **Assign verse label** sheet and pick a range that fits. New verse assignments take effect only when the import runs.
+6. Tap **Import**. The recordings appear in your draft's asset list, and a message confirms how many were imported. Recordings already in the draft are skipped. Imports can be reversed with the standard undo control.
+
+### How imported recordings behave
+
+- They carry an **import icon** in the asset list instead of the local hard-drive icon.
+- You can rename them and change their verse labels in your draft without touching the source version.
+- The asset detail view is unavailable for them, and they cannot be merged with other recordings.
+- When you publish the draft, imported recordings publish with it.
 
 ---
 
